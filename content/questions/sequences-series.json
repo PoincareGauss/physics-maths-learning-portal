@@ -1,0 +1,634 @@
+[
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q1",
+    "source": "JEE Main 2019 (12 April, Evening)",
+    "question": "If \\(a_1,a_2,a_3,\\ldots\\) are in A.P. such that \\(a_1+a_7+a_{16}=40\\), find the sum of the first 15 terms.",
+    "solution": "Indices \\(1,7,16\\) sum to \\(24=3\\times8\\), so \\(a_1+a_7+a_{16}=3(a+7d)=3a_8=40\\Rightarrow a_8=\\tfrac{40}{3}\\).\\[S_{15}=\\frac{15}{2}(a_1+a_{15})=15a_8=15\\times\\frac{40}{3}=200\\]",
+    "answer": "200",
+    "tip": "💡 <strong>Quick tip:</strong> \\(S_{15}=15a_8\\) since \\(a_8\\) is the middle (8th) term of 15 — spot that the middle term times the count gives the sum directly.",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q2",
+    "source": "JEE Main 2020 (9 January, Evening)",
+    "question": "Let \\(a_n\\) be the nth term of a G.P. of positive terms. If \\(\\displaystyle\\sum_{n=1}^{100}a_{2n+1}=200\\) and \\(\\displaystyle\\sum_{n=1}^{100}a_{2n}=100\\), find \\(\\displaystyle\\sum_{n=1}^{200}a_n\\).",
+    "solution": "\\(\\sum a_{2n}=a_2+a_4+\\cdots+a_{200}=r\\,(a_1+a_3+\\cdots+a_{199})=r\\cdot S_{\\text{odd}}=100\\).\\(\\sum a_{2n+1}=a_3+a_5+\\cdots+a_{201}=r^2\\cdot S_{\\text{odd}}=200\\).Dividing: \\(r=2\\), so \\(S_{\\text{odd}}=50\\) and \\(S_{\\text{even}}=100\\).\\[\\sum_{n=1}^{200}a_n=S_{\\text{odd}}+S_{\\text{even}}=50+100=150\\]",
+    "answer": "150",
+    "tip": "💡 <strong>Quick tip:</strong> In a GP, shifting every index by \\(k\\) multiplies the corresponding sum by \\(r^k\\) — use that ratio between the two given sums to find \\(r\\) before touching anything else.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 4,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q3",
+    "source": "JEE Main 2022 (25 June, Evening)",
+    "question": "\\[\\sum_{n=1}^{21}\\frac{3}{(4n-1)(4n+3)}\\]",
+    "solution": "\\(\\dfrac1{4n-1}-\\dfrac1{4n+3}=\\dfrac{4}{(4n-1)(4n+3)}\\), so \\(\\dfrac{3}{(4n-1)(4n+3)}=\\dfrac34\\left(\\dfrac1{4n-1}-\\dfrac1{4n+3}\\right)\\).The sum telescopes: \\(\\dfrac34\\left(\\dfrac13-\\dfrac1{87}\\right)=\\dfrac34\\cdot\\dfrac{84}{261}=\\dfrac{7}{29}\\)",
+    "answer": "7/29",
+    "tip": "💡 <strong>Quick tip:</strong> Spot that \\((4n+3)-(4n-1)=4\\) — that constant gap is exactly what turns the product into a clean telescoping difference.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 3,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q4",
+    "source": "JEE Main 2024 (5 April, Morning)",
+    "question": "If \\(\\dfrac{1}{\\sqrt1+\\sqrt2}+\\dfrac{1}{\\sqrt2+\\sqrt3}+\\cdots+\\dfrac{1}{\\sqrt{99}+\\sqrt{100}}=m\\) and \\(\\dfrac{1}{1\\cdot2}+\\dfrac{1}{2\\cdot3}+\\cdots+\\dfrac{1}{99\\cdot100}=n\\), find \\(m\\) and \\(n\\).",
+    "solution": "Rationalizing each term of \\(m\\): \\(\\dfrac1{\\sqrt k+\\sqrt{k+1}}=\\sqrt{k+1}-\\sqrt k\\), so \\(m\\) telescopes to \\(\\sqrt{100}-\\sqrt1=10-1=9\\).For \\(n\\): \\(\\dfrac1{k(k+1)}=\\dfrac1k-\\dfrac1{k+1}\\), so \\(n=1-\\dfrac1{100}=\\dfrac{99}{100}\\).",
+    "answer": "m = 9, n = 99/100",
+    "tip": "💡 <strong>Quick tip:</strong> Both sums are telescoping in disguise — one needs rationalizing the surd first, the other needs a partial-fraction split first.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q5",
+    "source": "JEE Main 2020 (5 September, Evening)",
+    "question": "If the sum of the first 20 terms of the series \\(\\log_{7^{1/2}}x+\\log_{7^{1/3}}x+\\log_{7^{1/4}}x+\\cdots\\) is 460, find \\(x\\).",
+    "solution": "Using \\(\\log_{a^{1/k}}b=k\\log_ab\\), the \\(k\\)th term (starting \\(k=1\\)) is \\(\\log_{7^{1/(k+1)}}x=(k+1)\\log_7x\\), so for \\(k=1,\\ldots,20\\) the coefficients run \\(2,3,\\ldots,21\\).\\[\\text{Sum}=\\log_7x\\left(\\sum_{j=2}^{21}j\\right)=\\log_7x\\,(230)=460\\Rightarrow\\log_7x=2\\Rightarrow x=49\\]",
+    "answer": "49",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\log_{a^{1/k}}b=k\\log_ab\\) turns a scary log series into an ordinary arithmetic sum of integers multiplying a single constant \\(\\log_7x\\).",
+    "technique_ids": [
+      "14"
+    ],
+    "difficulty": 3,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q6",
+    "source": "JEE Main 2023 (6 April, Morning)",
+    "question": "The sum of the first 20 terms of the series \\(5+11+19+29+41+\\cdots\\) is:",
+    "solution": "Differences are \\(6,8,10,12,\\ldots\\) (an AP with \\(d=2\\)), so the general term is quadratic. Summing the differences from \\(a_1=5\\): \\(a_n=5+(n-1)(n+4)=n^2+3n+1\\).\\[S_{20}=\\sum_{n=1}^{20}(n^2+3n+1)=\\frac{20\\cdot21\\cdot41}{6}+3\\cdot\\frac{20\\cdot21}{2}+20=2870+630+20=3520\\]",
+    "answer": "3520",
+    "tip": "💡 <strong>Quick tip:</strong> Constant second differences signal a quadratic \\(a_n\\) — rebuild \\(a_n\\) from the differences first, then sum with the standard \\(\\sum n,\\sum n^2\\) formulas.",
+    "technique_ids": [
+      "10",
+      "11"
+    ],
+    "difficulty": 3,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q7",
+    "source": "JEE Main 2022 (26 June, Evening)",
+    "question": "If \\(A=\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{\\big(3+(-1)^n\\big)^n}\\) and \\(B=\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{\\big(3+(-1)^n\\big)^n}\\), find \\(\\dfrac AB\\).",
+    "solution": "Split by parity. For even \\(n\\): denominator is \\(4^n\\), and both \\(A,B\\) get \\(+\\tfrac1{4^n}\\). For odd \\(n\\): denominator is \\(2^n\\), \\(A\\) gets \\(+\\tfrac1{2^n}\\) but \\(B\\) gets \\(-\\tfrac1{2^n}\\).\\(\\displaystyle\\sum_{\\text{even }n\\ge2}\\frac1{4^n}=\\frac{1/16}{1-1/16}=\\frac1{15}\\), \\(\\displaystyle\\sum_{\\text{odd }n\\ge1}\\frac1{2^n}=\\frac{1/2}{1-1/4}=\\frac23\\).\\[A=\\frac1{15}+\\frac23=\\frac{11}{15},\\quad B=\\frac1{15}-\\frac23=-\\frac35\\Rightarrow\\frac AB=\\frac{11/15}{-3/5}=-\\frac{11}{9}\\]",
+    "answer": "−11/9",
+    "tip": "💡 <strong>Quick tip:</strong> Split any series with \\((-1)^n\\) inside a more complex expression into its even-index and odd-index halves — each half is a plain GP.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 5,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q1",
+    "source": "IIT-JEE 2009, Paper 2",
+    "question": "If the sum of the first \\(n\\) terms of an A.P. is \\(cn^2\\), find the sum of the squares of these \\(n\\) terms.",
+    "solution": "\\(a_n=S_n-S_{n-1}=cn^2-c(n-1)^2=c(2n-1)\\), so this is an AP with first term \\(c\\) and common difference \\(2c\\).\\[\\sum_{k=1}^n a_k^2=c^2\\sum_{k=1}^n(2k-1)^2=c^2\\cdot\\frac{n(2n-1)(2n+1)}{3}=\\frac{c^2n(4n^2-1)}3\\]",
+    "answer": "c²n(4n² − 1)/3",
+    "tip": "💡 <strong>Quick tip:</strong> Recover the general term with \\(a_n=S_n-S_{n-1}\\) first — don't try to guess the AP's first term and common difference from \\(S_n\\) directly.",
+    "technique_ids": [
+      "08",
+      "11"
+    ],
+    "difficulty": 4,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q2",
+    "source": "IIT-JEE 1999",
+    "question": "Find the harmonic mean of the roots of \\((5+\\sqrt2)x^2-(4+\\sqrt5)x+(8+2\\sqrt5)=0\\).",
+    "solution": "For roots \\(\\alpha,\\beta\\): sum \\(=-b/a=\\dfrac{4+\\sqrt5}{5+\\sqrt2}\\), product \\(=c/a=\\dfrac{8+2\\sqrt5}{5+\\sqrt2}\\). Since \\(8+2\\sqrt5=2(4+\\sqrt5)\\):\\[\\text{HM}=\\frac{2\\alpha\\beta}{\\alpha+\\beta}=\\frac{2c}{-b}=\\frac{2(8+2\\sqrt5)}{4+\\sqrt5}=\\frac{4(4+\\sqrt5)}{4+\\sqrt5}=4\\]",
+    "answer": "4",
+    "tip": "💡 <strong>Quick tip:</strong> HM of the roots of \\(ax^2+bx+c=0\\) is always \\(\\dfrac{2c}{-b}\\) — a one-line formula, no need to solve for the roots themselves.",
+    "technique_ids": [
+      "07"
+    ],
+    "difficulty": 3,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q3",
+    "source": "IIT-JEE 1982",
+    "question": "The third term of a G.P. is 4. Find the product of its first five terms.",
+    "solution": "\\(a_3=ar^2=4\\). The product of 5 consecutive GP terms centered on \\(a_3\\) is \\((a_3)^5\\) (each pair equidistant from the center multiplies to \\(a_3^2\\)):\\[a\\cdot ar\\cdot ar^2\\cdot ar^3\\cdot ar^4=a^5r^{10}=(ar^2)^5=4^5=1024\\]",
+    "answer": "1024",
+    "tip": "💡 <strong>Quick tip:</strong> The product of an odd number of consecutive GP terms is just the middle term raised to that count — skip multiplying out all five factors.",
+    "technique_ids": [
+      "15"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q4",
+    "source": "JEE Advanced 2017, Paper 1 (Numerical)",
+    "question": "The sides of a right-angled triangle are in arithmetic progression. If the triangle has area 24, find the length of its smallest side.",
+    "solution": "Write the sides as \\(a-d,\\,a,\\,a+d\\) with hypotenuse \\(a+d\\). Pythagoras: \\((a-d)^2+a^2=(a+d)^2\\Rightarrow a^2=4ad\\Rightarrow a=4d\\).So the sides are \\(3d,4d,5d\\) (a scaled 3-4-5 triangle). Area \\(=\\tfrac12(3d)(4d)=6d^2=24\\Rightarrow d=2\\).",
+    "answer": "6",
+    "tip": "💡 <strong>Quick tip:</strong> Writing AP sides as \\(a-d,a,a+d\\) and applying Pythagoras forces \\(a=4d\\) immediately — recognize the 3-4-5 shape before touching the area condition.",
+    "technique_ids": [
+      "03"
+    ],
+    "difficulty": 4,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q5",
+    "source": "JEE Advanced 2018, Paper 1 (Numerical)",
+    "question": "Let \\(X\\) be the set of the first 2018 terms of the A.P. \\(1,6,11,\\ldots\\) and \\(Y\\) be the set of the first 2018 terms of the A.P. \\(9,16,23,\\ldots\\). Find \\(|X\\cup Y|\\).",
+    "solution": "\\(X=\\{5n-4:1\\le n\\le2018\\}\\) (up to 10086), \\(Y=\\{7m+2:1\\le m\\le2018\\}\\) (up to 14128). \\(X\\cap Y\\) needs \\(x\\equiv1\\pmod5\\) and \\(x\\equiv2\\pmod7\\), i.e. \\(x\\equiv16\\pmod{35}\\) by CRT.Within \\(X\\)'s range \\([1,10086]\\): \\(x=16+35k\\le10086\\Rightarrow k\\le287\\), giving 288 common terms.\\[|X\\cup Y|=2018+2018-288=3748\\]",
+    "answer": "3748",
+    "tip": "💡 <strong>Quick tip:</strong> Turn \\(X\\cap Y\\) into a modular-arithmetic (CRT) problem — find the single residue class both APs share, then count how many of those fall inside the shorter AP's range.",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 5,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q6",
+    "source": "JEE Advanced 2019, Paper 1 (Numerical)",
+    "question": "Let \\(AP(a;d)\\) denote an infinite A.P. with first term \\(a\\) and common difference \\(d>0\\). If \\(AP(1;3)\\cap AP(2;5)\\cap AP(3;7)=AP(a;d)\\), find \\(a+d\\).",
+    "solution": "Since \\(3,5,7\\) are pairwise coprime, the intersection is an AP with \\(d=\\mathrm{lcm}(3,5,7)=105\\). Find the smallest common term: solve \\(x\\equiv1\\!\\!\\pmod3,\\ x\\equiv2\\!\\!\\pmod5,\\ x\\equiv3\\!\\!\\pmod7\\) by CRT, giving \\(x\\equiv52\\pmod{105}\\).\\[a=52,\\ d=105\\Rightarrow a+d=157\\]",
+    "answer": "157",
+    "tip": "💡 <strong>Quick tip:</strong> The intersection of several APs with pairwise-coprime common differences is itself an AP whose common difference is their lcm — find the smallest shared term via CRT.",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 5,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q1",
+    "source": "BITSAT 2021",
+    "question": "Find the sum of \\(n\\) terms of the series \\(1\\cdot3^2+2\\cdot5^2+3\\cdot7^2+\\cdots\\)",
+    "solution": "The \\(k\\)th term is \\(k(2k+1)^2=4k^3+4k^2+k\\). Summing with the standard closed forms:\\[S_n=4\\left(\\frac{n(n+1)}2\\right)^2+4\\cdot\\frac{n(n+1)(2n+1)}6+\\frac{n(n+1)}2=\\frac{n(n+1)(6n^2+14n+7)}{6}\\]",
+    "answer": "n(n+1)(6n² + 14n + 7)/6",
+    "tip": "💡 <strong>Quick tip:</strong> Expand the \\(k\\)th term into separate powers of \\(k\\) first, then apply \\(\\sum k,\\sum k^2,\\sum k^3\\) to each piece and recombine — don't try to spot a pattern by hand.",
+    "technique_ids": [
+      "11"
+    ],
+    "difficulty": 3,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q2",
+    "source": "BITSAT 2020",
+    "question": "If \\(a_1,a_2,\\ldots,a_{20}\\) are 20 arithmetic means inserted between 13 and 67, find the maximum value among them.",
+    "solution": "With 20 means, the full run \\(13,a_1,\\ldots,a_{20},67\\) is an AP of 22 terms, so \\(d=\\dfrac{67-13}{21}=\\dfrac{18}{7}\\). The largest mean is \\(a_{20}\\) (closest to 67):\\[a_{20}=13+20d=13+\\frac{360}7=\\frac{451}7\\]",
+    "answer": "451/7",
+    "tip": "💡 <strong>Quick tip:</strong> Inserting \\(n\\) means between two numbers always makes a run of \\(n+2\\) terms — count the total terms carefully before computing \\(d\\).",
+    "technique_ids": [
+      "06"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q3",
+    "source": "BITSAT 2023",
+    "question": "If \\(a_1,a_2,\\ldots,a_n\\) are in H.P., show what \\(a_1a_2+a_2a_3+\\cdots+a_{n-1}a_n\\) equals.",
+    "solution": "Let \\(b_k=1/a_k\\), so \\(b_1,\\ldots,b_n\\) is an AP with common difference \\(d\\). Then \\(a_ka_{k+1}=\\dfrac1{b_kb_{k+1}}=\\dfrac1d\\left(\\dfrac1{b_k}-\\dfrac1{b_{k+1}}\\right)=\\dfrac1d(a_k-a_{k+1})\\). Summing telescopes:\\[\\sum_{k=1}^{n-1}a_ka_{k+1}=\\frac1d(a_1-a_n)\\]Since \\(d=\\dfrac{1/a_n-1/a_1}{n-1}=\\dfrac{a_1-a_n}{(n-1)a_1a_n}\\), this simplifies to \\((n-1)a_1a_n\\).",
+    "answer": "(n − 1)·a₁aₙ",
+    "tip": "💡 <strong>Quick tip:</strong> Convert the HP to its reciprocal AP first — the telescoping trick that works for \\(\\tfrac1{r(r+1)}\\)-type sums applies directly once you're back in AP-land.",
+    "technique_ids": [
+      "07",
+      "09"
+    ],
+    "difficulty": 4,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q4",
+    "source": "BITSAT 2025",
+    "question": "Three numbers \\(a,b,c\\) lie between 2 and 18 with sum 25. The numbers \\(2,a,b\\) are in A.P. and \\(b,c,18\\) are in G.P. Find \\(a+b+c\\).",
+    "solution": "The sum \\(a+b+c\\) is given directly in the problem as 25 — the AP and GP conditions only pin down the individual values of \\(a,b,c\\), which this question doesn't ask for.",
+    "answer": "25",
+    "tip": "💡 <strong>Quick tip:</strong> Before setting up equations from the AP/GP conditions, check whether the question is actually asking for something already stated outright.",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q1",
+    "source": "KCET 2025",
+    "question": "If the 4th, 10th and 16th terms of a G.P. are \\(x,y,z\\) respectively, what relation do \\(x,y,z\\) satisfy?",
+    "solution": "The indices \\(4,10,16\\) are equally spaced (gap 6), so \\(x,y,z\\) themselves form a GP with common ratio \\(r^6\\). For any GP, the middle term squared equals the product of its neighbors:\\[y^2=xz\\]",
+    "answer": "y² = xz  (x, y, z are in G.P.)",
+    "tip": "💡 <strong>Quick tip:</strong> Equally-spaced terms of a GP (same index gap) always form their own GP — check the index gaps before doing any algebra.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q2",
+    "source": "KCET 2024",
+    "question": "If \\(S_n\\) is the sum of \\(n\\) terms of a G.P. with first term \\(a\\) and common ratio \\(r\\), find \\(S_n:S_{2n}\\).",
+    "solution": "\\(S_n=\\dfrac{a(r^n-1)}{r-1}\\) and \\(S_{2n}=\\dfrac{a(r^{2n}-1)}{r-1}=\\dfrac{a(r^n-1)(r^n+1)}{r-1}\\).\\[\\frac{S_n}{S_{2n}}=\\frac1{r^n+1}\\]",
+    "answer": "1 : (rⁿ + 1)",
+    "tip": "💡 <strong>Quick tip:</strong> Factor \\(r^{2n}-1\\) as \\((r^n-1)(r^n+1)\\) — the \\(S_n\\) piece cancels cleanly, leaving a one-term ratio.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q3",
+    "source": "KCET 2019",
+    "question": "The third term of a G.P. is 9. Find the product of its first five terms.",
+    "solution": "The product of 5 consecutive GP terms centered on the third term equals that term raised to the 5th power:\\[(a_3)^5=9^5=59049\\]",
+    "answer": "59049",
+    "tip": "💡 <strong>Quick tip:</strong> Same shortcut as before — product of an odd run of GP terms is (middle term)^(count), regardless of what the actual first term or ratio are.",
+    "technique_ids": [
+      "15"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q4",
+    "source": "KCET 2017",
+    "question": "Find \\(3+5+7+\\cdots\\) to \\(n\\) terms.",
+    "solution": "This is an AP with \\(a=3,\\,d=2\\):\\[S_n=\\frac n2\\big[2(3)+(n-1)(2)\\big]=\\frac n2(2n+4)=n(n+2)\\]",
+    "answer": "n(n + 2)  =  n² + 2n",
+    "tip": "💡 <strong>Quick tip:</strong> Plug directly into \\(S_n=\\tfrac n2[2a+(n-1)d]\\) — this series doesn't need any trick, just careful substitution.",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q1 (style)",
+    "source": "Arithmetic progressions — 0606, Sequences & Series",
+    "question": "The 5th term of an A.P. is 23 and the 12th term is 58. Find the first term and common difference, hence find \\(S_{20}\\).",
+    "solution": "\\(a+4d=23\\) and \\(a+11d=58\\). Subtracting: \\(7d=35\\Rightarrow d=5\\), so \\(a=23-20=3\\).\\[S_{20}=\\frac{20}2\\big[2(3)+19(5)\\big]=10(6+95)=1010\\]",
+    "answer": "a = 3, d = 5, S₂₀ = 1010",
+    "tip": "💡 <strong>Quick tip:</strong> Two term conditions give two equations in \\(a,d\\) — subtract them to eliminate \\(a\\) first, exactly as you would for simultaneous linear equations.",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q2 (style)",
+    "source": "Sum to infinity — 0606, Sequences & Series",
+    "question": "A G.P. has first term 12 and sum to infinity 16. Find the common ratio, and hence the sum of the first 6 terms.",
+    "solution": "\\(\\dfrac{a}{1-r}=16\\) with \\(a=12\\Rightarrow1-r=\\dfrac{12}{16}=\\dfrac34\\Rightarrow r=\\dfrac14\\).\\[S_6=\\frac{12\\left(1-(1/4)^6\\right)}{1-1/4}=16\\left(1-\\frac1{4096}\\right)=\\frac{4095}{256}\\]",
+    "answer": "r = 1/4, S₆ = 4095/256",
+    "tip": "💡 <strong>Quick tip:</strong> Find \\(r\\) from the sum-to-infinity condition first — then it's a routine finite-GP-sum calculation.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q3 (style)",
+    "source": "Recovering a sequence from Sₙ — 0606, Sequences & Series",
+    "question": "The sum of the first \\(n\\) terms of an A.P. is given by \\(S_n=4n^2-n\\). Find the first term and the common difference.",
+    "solution": "\\(a_1=S_1=4-1=3\\). \\(a_2=S_2-S_1=(16-2)-3=11\\). So \\(d=a_2-a_1=8\\).",
+    "answer": "a = 3, d = 8",
+    "tip": "💡 <strong>Quick tip:</strong> Never assume \\(a\\) and \\(d\\) directly from the coefficients of \\(S_n\\) — always compute \\(a_1=S_1\\) and \\(a_2=S_2-S_1\\) to be sure.",
+    "technique_ids": [
+      "08"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q4 (style)",
+    "source": "GP word problem — 0606, Sequences & Series",
+    "question": "A ball is dropped from a height of 10 m. After each bounce it rises to \\(\\tfrac35\\) of the height it fell from. Find the total distance travelled before it comes to rest.",
+    "solution": "Distance \\(=10+2\\displaystyle\\sum_{n=1}^{\\infty}10\\left(\\frac35\\right)^n=10+20\\cdot\\frac{3/5}{1-3/5}=10+20\\cdot\\frac32=10+30=40\\text{ m}\\)",
+    "answer": "40 m",
+    "tip": "💡 <strong>Quick tip:</strong> Every bounce after the first contributes twice its rise height (up and back down) — set up the infinite GP for the rises, then double it before adding the initial drop.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 3,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S01-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the 15th term of the A.P. \\(7,11,15,19,\\ldots\\)",
+    "solution": "\\(a=7,\\,d=4\\). \\(a_{15}=7+14(4)=7+56=63\\)",
+    "answer": "63",
+    "tip": "💡 <strong>Quick tip:</strong> Plug straight into \\(a_n=a+(n-1)d\\) — no shortcuts needed for a direct nth-term question.",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S02-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the 8th term of the G.P. \\(5,10,20,40,\\ldots\\)",
+    "solution": "\\(a=5,\\,r=2\\). \\(a_8=5\\cdot2^7=5\\times128=640\\)",
+    "answer": "640",
+    "tip": "💡 <strong>Quick tip:</strong> Same idea as the AP version — \\(a_n=ar^{n-1}\\), just substitute directly.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S06-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Insert 4 arithmetic means between 3 and 23.",
+    "solution": "6 terms total, so \\(d=\\dfrac{23-3}5=4\\). The means are \\(3+4=7,\\ 11,\\ 15,\\ 19\\).",
+    "answer": "7, 11, 15, 19",
+    "tip": "💡 <strong>Quick tip:</strong> Count the total terms (means + 2 endpoints) before dividing — a common slip is dividing by the number of means instead of means+1.",
+    "technique_ids": [
+      "06"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S06-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Insert 2 geometric means between 4 and 32.",
+    "solution": "4 terms total, so \\(r=\\left(\\dfrac{32}4\\right)^{1/3}=8^{1/3}=2\\). The means are \\(4\\times2=8\\) and \\(16\\).",
+    "answer": "8, 16",
+    "tip": "💡 <strong>Quick tip:</strong> Same counting rule as arithmetic means — the exponent is \\(1/(n+1)\\) where \\(n\\) is the number of means being inserted.",
+    "technique_ids": [
+      "06"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S02-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the sum to infinity of \\(8+4+2+1+\\cdots\\)",
+    "solution": "\\(a=8,\\,r=\\tfrac12\\). \\(S_\\infty=\\dfrac{8}{1-1/2}=16\\)",
+    "answer": "16",
+    "tip": "💡 <strong>Quick tip:</strong> Always check \\(|r|<1\\) before reaching for the sum-to-infinity formula — here \\(r=1/2\\) qualifies immediately.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S09-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find \\(\\displaystyle\\sum_{r=1}^{n}\\frac1{(2r-1)(2r+1)}\\)",
+    "solution": "\\(\\dfrac1{(2r-1)(2r+1)}=\\dfrac12\\left(\\dfrac1{2r-1}-\\dfrac1{2r+1}\\right)\\), which telescopes to \\(\\dfrac12\\left(1-\\dfrac1{2n+1}\\right)=\\dfrac{n}{2n+1}\\)",
+    "answer": "n/(2n + 1)",
+    "tip": "💡 <strong>Quick tip:</strong> Any \\(\\tfrac1{(\\text{linear})(\\text{linear}+2)}\\) shape splits the same way as \\(\\tfrac1{r(r+1)}\\) — just with a factor of \\(\\tfrac12\\) out front.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S05-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(a+b=10\\) with \\(a,b>0\\), find the maximum possible value of \\(ab\\).",
+    "solution": "By AM–GM, \\(\\dfrac{a+b}2\\ge\\sqrt{ab}\\Rightarrow5\\ge\\sqrt{ab}\\Rightarrow ab\\le25\\), with equality when \\(a=b=5\\).",
+    "answer": "25",
+    "tip": "💡 <strong>Quick tip:</strong> Fixed-sum, maximize-product questions are AM–GM in disguise — the maximum always occurs when all the terms are equal.",
+    "technique_ids": [
+      "05"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S07-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the 4th term of the H.P. \\(\\dfrac12,\\dfrac15,\\dfrac18,\\ldots\\)",
+    "solution": "Reciprocals \\(2,5,8,\\ldots\\) form an AP with \\(d=3\\). The 4th term of that AP is \\(2+3(3)=11\\), so the 4th term of the HP is \\(\\dfrac1{11}\\).",
+    "answer": "1/11",
+    "tip": "💡 <strong>Quick tip:</strong> Always invert an HP into its AP first — never try to spot a pattern in the fractions directly.",
+    "technique_ids": [
+      "07"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S08-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "The sum of the first \\(n\\) terms of a sequence is \\(S_n=3n^2+2n\\). Find the 10th term.",
+    "solution": "\\(a_{10}=S_{10}-S_9=(300+20)-(243+18)=320-261=59\\)",
+    "answer": "59",
+    "tip": "💡 <strong>Quick tip:</strong> Don't try to guess a formula for \\(a_n\\) by eye — compute \\(S_{10}-S_9\\) directly and you're done in one line.",
+    "technique_ids": [
+      "08"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S13-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the sum to infinity of \\(1+2\\left(\\dfrac13\\right)+3\\left(\\dfrac13\\right)^2+4\\left(\\dfrac13\\right)^3+\\cdots\\)",
+    "solution": "This is \\(\\displaystyle\\sum_{n=0}^\\infty(n+1)x^n=\\dfrac1{(1-x)^2}\\) with \\(x=\\dfrac13\\):\\[\\frac1{(2/3)^2}=\\frac94\\]",
+    "answer": "9/4",
+    "tip": "💡 <strong>Quick tip:</strong> Recognize the \\((n+1)x^n\\) coefficient pattern — it's a standard AGP with a memorizable closed form, not something to sum term by term.",
+    "technique_ids": [
+      "13"
+    ],
+    "difficulty": 2,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S11-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find \\(1^2+2^2+\\cdots+10^2\\)",
+    "solution": "\\(\\dfrac{10\\cdot11\\cdot21}6=\\dfrac{2310}6=385\\)",
+    "answer": "385",
+    "tip": "💡 <strong>Quick tip:</strong> Plug straight into the closed-form sum-of-squares formula — no need to add ten squares by hand.",
+    "technique_ids": [
+      "11"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-S11-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find \\(1^3+2^3+\\cdots+6^3\\)",
+    "solution": "\\(\\left(\\dfrac{6\\cdot7}2\\right)^2=21^2=441\\)",
+    "answer": "441",
+    "tip": "💡 <strong>Quick tip:</strong> The sum of the first \\(n\\) cubes is always a perfect square — specifically, the square of the sum of the first \\(n\\) naturals.",
+    "technique_ids": [
+      "11"
+    ],
+    "difficulty": 1,
+    "topic": "sequences-series",
+    "subject": "math",
+    "solved_default": false
+  }
+]

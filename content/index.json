@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "generatedFrom": "Trickbank source data",
+  "subjects": "subjects.json",
+  "exams": "exams.json",
+  "topics": [
+    {
+      "id": "limits",
+      "subject": "math",
+      "label": "Limits",
+      "live": true,
+      "file": "topics/limits.json",
+      "questions": "questions/limits.json",
+      "questionCount": 88
+    },
+    {
+      "id": "continuity",
+      "subject": "math",
+      "label": "Continuity & Differentiability",
+      "live": false,
+      "file": "topics/continuity.json",
+      "questions": "questions/continuity.json",
+      "questionCount": 0
+    },
+    {
+      "id": "definite-integrals",
+      "subject": "math",
+      "label": "Definite Integrals",
+      "live": true,
+      "file": "topics/definite-integrals.json",
+      "questions": "questions/definite-integrals.json",
+      "questionCount": 87
+    },
+    {
+      "id": "sequences-series",
+      "subject": "math",
+      "label": "Sequences & Series",
+      "live": true,
+      "file": "topics/sequences-series.json",
+      "questions": "questions/sequences-series.json",
+      "questionCount": 37
+    },
+    {
+      "id": "vectors-3d",
+      "subject": "math",
+      "label": "Vectors & 3D Geometry",
+      "live": false,
+      "file": "topics/vectors-3d.json",
+      "questions": "questions/vectors-3d.json",
+      "questionCount": 0
+    },
+    {
+      "id": "probability",
+      "subject": "math",
+      "label": "Probability",
+      "live": false,
+      "file": "topics/probability.json",
+      "questions": "questions/probability.json",
+      "questionCount": 0
+    },
+    {
+      "id": "projectile-relative-velocity",
+      "subject": "physics",
+      "label": "Projectile Motion & Relative Velocity",
+      "live": true,
+      "file": "topics/projectile-relative-velocity.json",
+      "questions": "questions/projectile-relative-velocity.json",
+      "questionCount": 4
+    },
+    {
+      "id": "newtons-laws",
+      "subject": "physics",
+      "label": "Newton's Laws & Friction",
+      "live": false,
+      "file": "topics/newtons-laws.json",
+      "questions": "questions/newtons-laws.json",
+      "questionCount": 0
+    },
+    {
+      "id": "rotational-mechanics",
+      "subject": "physics",
+      "label": "Rotational Mechanics",
+      "live": false,
+      "file": "topics/rotational-mechanics.json",
+      "questions": "questions/rotational-mechanics.json",
+      "questionCount": 0
+    },
+    {
+      "id": "electrostatics",
+      "subject": "physics",
+      "label": "Electrostatics",
+      "live": false,
+      "file": "topics/electrostatics.json",
+      "questions": "questions/electrostatics.json",
+      "questionCount": 0
+    },
+    {
+      "id": "current-electricity",
+      "subject": "physics",
+      "label": "Current Electricity",
+      "live": false,
+      "file": "topics/current-electricity.json",
+      "questions": "questions/current-electricity.json",
+      "questionCount": 0
+    }
+  ]
+}

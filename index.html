@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trickbank — a pattern-first Math & Physics learning portal for competitive exams.">
+  <meta name="theme-color" content="#231f1a">
+  <title>Trickbank — Math & Physics Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js" id="MathJax-script" async></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <a class="brand" href="#dashboard" aria-label="Trickbank home">◇ Trickbank</a>
+        <span class="brand-sub">Math &amp; Physics · pattern-first learning</span>
+      </div>
+
+      <div class="subject-switch" id="subjectSwitch" aria-label="Choose subject"></div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <span class="nav-label">Learn</span>
+        <a href="#dashboard" data-route="dashboard">⌂ <span>Dashboard</span></a>
+        <a href="#topics" data-route="topics">▦ <span>Topics</span></a>
+        <a href="#questions" data-route="questions">◇ <span>Question Bank</span></a>
+        <a href="#toolkit" data-route="toolkit">✦ <span>Trick Toolkit</span></a>
+        <a href="#formulas" data-route="formulas">∑ <span>Formula Sheet</span></a>
+        <a href="#tests" data-route="tests">⏱ <span>Timed Tests</span></a>
+        <a href="#bookmarks" data-route="bookmarks">★ <span>Bookmarks</span></a>
+        <a href="#mistakes" data-route="mistakes">⚠ <span>Mistake Notebook</span></a>
+        <a href="#progress" data-route="progress">✓ <span>My Progress</span></a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="eyebrow">Study philosophy</span>
+        <p>Don't memorize hundreds of solutions. Learn the small set of moves that keep recurring.</p>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumbs" id="breadcrumbs">Dashboard</div>
+        <div class="top-actions">
+          <label class="global-search" aria-label="Search questions">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Search questions, techniques…" autocomplete="off">
+          </label>
+          <button class="icon-btn" id="clearSearch" title="Clear search" aria-label="Clear search">×</button>
+        </div>
+      </header>
+
+      <main id="app" tabindex="-1"></main>
+
+      <footer>
+        <span>Trickbank</span> — Math &amp; Physics, organized by the moves that solve them.
+      </footer>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="drillRoot"></div>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

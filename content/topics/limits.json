@@ -1,0 +1,173 @@
+{
+  "id": "limits",
+  "subject": "math",
+  "label": "Limits",
+  "live": true,
+  "blurb": "What happens as x gets close, but never quite arrives — verified PYQs across six exam boards, graded by difficulty and tagged by technique.",
+  "exam_order": [
+    "jee-main",
+    "jee-adv",
+    "bitsat",
+    "kcet",
+    "apcalc",
+    "igcse",
+    "riemann",
+    "practice"
+  ],
+  "toolkit": [
+    {
+      "id": "01",
+      "title": "Small-x replacements",
+      "desc": "Near \\(x\\to0\\), swap these in before simplifying — only leading order matters: \\(\\sin kx \\to kx\\), \\(\\tan kx \\to kx\\), \\(1-\\cos kx \\to \\tfrac{k^2x^2}{2}\\), \\(\\ln(1+kx) \\to kx\\), \\(e^{kx}-1 \\to kx\\)."
+    },
+    {
+      "id": "02",
+      "title": "When leading terms cancel, go deeper",
+      "desc": "If the substitution above kills the whole expression, use the next Taylor term: \\(\\sin x\\approx x-\\tfrac{x^3}{6}\\), \\(\\tan x\\approx x+\\tfrac{x^3}{3}\\), \\(\\cos x\\approx1-\\tfrac{x^2}{2}+\\tfrac{x^4}{24}\\)."
+    },
+    {
+      "id": "03",
+      "title": "A power raised to a function, exponentiated",
+      "desc": "Never expand \\([1+f(x)]^{g(x)}\\) directly. Isolate \\(f(x)\\to0\\) and \\(g(x)\\to\\infty\\), take that product's limit, and exponentiate: \\([1+f(x)]^{g(x)} \\to e^{\\lim f(x)g(x)}\\)."
+    },
+    {
+      "id": "04",
+      "title": "Memorize the big expansions",
+      "desc": "\\((1+x)^{1/x}=e(1-\\tfrac x2+\\tfrac{11x^2}{24}-\\cdots)\\) and its generalization show up constantly — know them cold."
+    },
+    {
+      "id": "05",
+      "title": "Roots of a quadratic? Use Vieta's",
+      "desc": "If \\(\\alpha,\\beta\\) are roots of \\(ax^2+bx+c=0\\), express symmetric answers via \\(\\alpha+\\beta=-b/a\\) and \\(\\alpha\\beta=c/a\\) directly."
+    },
+    {
+      "id": "06",
+      "title": "Telescoping — spot the subtraction shape",
+      "desc": "\\(\\tan^{-1}\\) sums or partial fractions like \\(\\tfrac{1}{r(r+1)}\\) are usually a disguised \\(g(r+1)-g(r)\\). Rewrite before summing."
+    },
+    {
+      "id": "07",
+      "title": "Limits at infinity with unknowns",
+      "desc": "Do the polynomial division first. Whatever coefficient multiplies a divergent power of \\(x\\) must be forced to zero."
+    },
+    {
+      "id": "08",
+      "title": "Matching orders in 0/0 with parameters",
+      "desc": "Force the lower-order coefficient to vanish first (fixes one unknown), then read the remaining ratio off the next surviving terms."
+    },
+    {
+      "id": "09",
+      "title": "Radical differences — substitute",
+      "desc": "For \\(\\sqrt[3]{a^3+x}-a\\)-type expressions, let \\(y=\\) the root expression. It becomes a difference-of-squares/cubes factoring problem."
+    },
+    {
+      "id": "10",
+      "title": "Recognize the derivative definition",
+      "desc": "\\(\\lim_{h\\to0}\\tfrac{f(a+h)-f(a)}{h}\\) (in any variable name) is just \\(f'(a)\\). Spotting this skips all algebra."
+    },
+    {
+      "id": "11",
+      "title": "Sums that are secretly Riemann sums",
+      "desc": "\\(\\tfrac1n\\sum f(k/n)\\to\\int_0^1 f(x)dx\\) — convert to an integral. Use closed forms for \\(\\sum r,\\ \\sum r^2,\\ \\sum r^3\\) instead of summing."
+    },
+    {
+      "id": "12",
+      "title": "Check indeterminacy first",
+      "desc": "If plugging in the point directly gives a real number, you're done — no L'Hôpital, no expansion needed. Most commonly skipped step."
+    },
+    {
+      "id": "13",
+      "title": "0/0 at a “nice” nonzero point → L'Hôpital",
+      "desc": "Series expansions are for \\(x\\to0\\). At points like \\(\\pi/4\\) or \\(1\\), differentiating top and bottom is almost always faster."
+    },
+    {
+      "id": "14",
+      "title": "Denominator → 0, numerator doesn't",
+      "desc": "Check the sign of each factor just left and right of the point separately — don't assume \\(\\pm\\infty\\) blindly; it may be a genuine DNE."
+    },
+    {
+      "id": "15",
+      "title": "Rational end behavior — compare degrees",
+      "desc": "deg(denominator) > deg(numerator) ⇒ limit is 0. Equal degrees ⇒ ratio of leading coefficients. No expansion needed."
+    },
+    {
+      "id": "16",
+      "title": "Closed-form sums, not hand summation",
+      "desc": "\\(\\sum r,\\ \\sum r^2,\\ \\sum r^3,\\ \\sum(2r-1)=n^2\\), and \\(\\sum ar^k=\\tfrac{ar}{1-r}\\) for \\(|r|<1\\) — recall the formula, don't expand term by term."
+    },
+    {
+      "id": "17",
+      "title": "Fixed-point recurrences",
+      "desc": "For a convergent recurrence \\(a_{n+1}=f(a_n)\\to L\\), solve \\(L=f(L)\\) directly instead of tracking terms."
+    },
+    {
+      "id": "18",
+      "title": "Infinite products & functional iteration",
+      "desc": "Take \\(\\ln\\) to turn a product into a sum (often a Riemann sum), or recognize repeated angle-halving products collapsing to \\(\\tfrac{\\sin x}{x}\\)."
+    }
+  ],
+  "formulas": [
+    {
+      "cat": "A · Series expansions (near x = 0)",
+      "items": [
+        "\\(\\sin x = x-\\dfrac{x^3}{6}+\\dfrac{x^5}{120}-\\cdots\\)",
+        "\\(\\tan x = x+\\dfrac{x^3}{3}+\\cdots\\)",
+        "\\(\\cos x = 1-\\dfrac{x^2}{2}+\\dfrac{x^4}{24}-\\cdots\\)",
+        "\\(\\cot x = \\dfrac1x-\\dfrac{x}{3}-\\dfrac{x^3}{45}-\\cdots\\)",
+        "\\(e^x = 1+x+\\dfrac{x^2}{2!}+\\dfrac{x^3}{3!}+\\cdots\\)",
+        "\\(\\ln(1+x)=x-\\dfrac{x^2}{2}+\\dfrac{x^3}{3}-\\cdots\\)",
+        "\\(a^x = e^{x\\ln a}=1+x\\ln a+\\dfrac{(x\\ln a)^2}{2}+\\cdots\\)",
+        "\\(\\sqrt{a^2\\pm x^2}=a\\left(1\\pm\\dfrac{x^2}{2a^2}-\\dfrac{x^4}{8a^4}+\\cdots\\right)\\)",
+        "\\((1+x)^{1/x}=e\\left(1-\\dfrac x2+\\dfrac{11x^2}{24}-\\cdots\\right)\\)",
+        "\\((1+kx)^{1/x}=e^k\\left(1-\\dfrac{k^2}{2}x+\\left(\\dfrac{k^3}{3}+\\dfrac{k^4}{8}\\right)x^2-\\cdots\\right)\\)"
+      ]
+    },
+    {
+      "cat": "B · Standard limits",
+      "items": [
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1\\)",
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{\\tan x}{x}=1\\)",
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}=\\dfrac12\\)",
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{1-\\cos(kx)}{x^2}=\\dfrac{k^2}{2}\\)",
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{e^x-1}{x}=1\\)",
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x}=1\\)",
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{a^x-1}{x}=\\ln a\\)",
+        "\\(\\displaystyle\\lim_{x\\to0}\\dfrac{a^x-b^x}{x}=\\ln\\!\\left(\\dfrac ab\\right)\\)",
+        "\\(\\displaystyle\\lim_{x\\to\\infty}\\left(1+\\dfrac1x\\right)^x=e\\)",
+        "\\(\\displaystyle\\lim_{x\\to1}\\dfrac{x^n-1}{x-1}=n\\)",
+        "\\(\\displaystyle\\lim_{\\theta\\to0}\\dfrac{1-\\cos(a\\theta)}{1-\\cos(b\\theta)}=\\dfrac{a^2}{b^2}\\)"
+      ]
+    },
+    {
+      "cat": "C · Closed-form series sums",
+      "items": [
+        "\\(\\displaystyle\\sum_{r=1}^n r=\\dfrac{n(n+1)}{2}\\)",
+        "\\(\\displaystyle\\sum_{r=1}^n r^2=\\dfrac{n(n+1)(2n+1)}{6}\\)",
+        "\\(\\displaystyle\\sum_{r=1}^n r^3=\\left(\\dfrac{n(n+1)}{2}\\right)^2\\)",
+        "\\(\\displaystyle\\sum_{r=1}^n (2r-1)=n^2\\)",
+        "\\(\\displaystyle\\sum_{k=1}^{\\infty} ar^k=\\dfrac{ar}{1-r}\\quad(|r|<1)\\)"
+      ]
+    },
+    {
+      "cat": "D · Algebraic / trigonometric identities",
+      "items": [
+        "Vieta's: roots \\(\\alpha,\\beta\\) of \\(ax^2+bx+c=0\\) ⇒ \\(\\alpha+\\beta=-\\dfrac ba,\\ \\alpha\\beta=\\dfrac ca\\)",
+        "\\(\\dfrac{\\alpha}{1-\\alpha}+\\dfrac{\\beta}{1-\\beta}=\\dfrac{(\\alpha+\\beta)-2\\alpha\\beta}{1-(\\alpha+\\beta)+\\alpha\\beta}\\)",
+        "\\(\\tan^{-1}a-\\tan^{-1}b=\\tan^{-1}\\!\\left(\\dfrac{a-b}{1+ab}\\right)\\)",
+        "\\(a^2-b^2=(a-b)(a+b)\\)",
+        "\\(a^3-b^3=(a-b)(a^2+ab+b^2)\\)",
+        "AM–GM: \\(a+b\\ge2\\sqrt{ab}\\) for \\(a,b\\ge0\\) (equality iff \\(a=b\\))"
+      ]
+    },
+    {
+      "cat": "E · Calculus tools",
+      "items": [
+        "\\(f'(a)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}\\)",
+        "\\(\\dfrac{d}{dx}\\sqrt x=\\dfrac{1}{2\\sqrt x}\\qquad \\dfrac{d}{dx}\\sqrt[3]{x}=\\dfrac{1}{3x^{2/3}}\\)",
+        "L'Hôpital: if \\(\\tfrac{f}{g}\\to\\tfrac00\\) or \\(\\tfrac\\infty\\infty\\), then \\(\\lim\\tfrac fg=\\lim\\tfrac{f'}{g'}\\)",
+        "Riemann sum (0 to 1): \\(\\displaystyle\\lim_{n\\to\\infty}\\dfrac1n\\sum_{k=1}^n f\\!\\left(\\dfrac kn\\right)=\\int_0^1 f(x)dx\\)",
+        "Riemann sum (a to b): \\(\\displaystyle\\lim_{n\\to\\infty}\\dfrac{b-a}{n}\\sum_{k=1}^n f\\!\\left(a+k\\cdot\\dfrac{b-a}{n}\\right)=\\int_a^b f(x)dx\\)"
+      ]
+    }
+  ]
+}

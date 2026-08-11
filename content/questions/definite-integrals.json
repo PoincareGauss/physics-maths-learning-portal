@@ -1,0 +1,1494 @@
+[
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q1",
+    "source": "AIEEE 2003",
+    "question": "\\[ \\text{Evaluate } I=\\int_0^1 x(1-x)^n\\,dx \\]",
+    "solution": "This is exactly the Beta integral \\(B(2,n+1)=\\dfrac{1!\\,n!}{(n+2)!}\\). Since \\((n+2)!=(n+2)(n+1)\\cdot n!\\), it simplifies to \\(\\dfrac{1}{(n+1)(n+2)}\\).",
+    "answer": "\\(\\dfrac{1}{(n+1)(n+2)}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> Any \\(\\int_0^1 x^m(1-x)^n dx\\) is \\(\\dfrac{m!\\,n!}{(m+n+1)!}\\) — don't binomially expand \\((1-x)^n\\) by hand.",
+    "technique_ids": [
+      "13"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q2",
+    "source": "AIEEE 2002",
+    "question": "\\[ \\int_0^{2} [x^2]\\,dx \\]",
+    "solution": "\\(x^2\\) crosses each integer at \\(x=1,\\sqrt2,\\sqrt3,2\\). So \\([x^2]=0\\) on \\([0,1)\\), \\(1\\) on \\([1,\\sqrt2)\\), \\(2\\) on \\([\\sqrt2,\\sqrt3)\\), \\(3\\) on \\([\\sqrt3,2)\\).\\n        \\[ I = 1\\cdot(\\sqrt2-1)+2\\cdot(\\sqrt3-\\sqrt2)+3\\cdot(2-\\sqrt3) = 5-\\sqrt2-\\sqrt3 \\]",
+    "answer": "\\(5-\\sqrt2-\\sqrt3\\)",
+    "tip": "💡 <strong>Quick tip:</strong> With \\([f(x)]\\) inside an integral, first solve \\(f(x)=\\)integer to find every breakpoint, then treat each piece as a constant.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q3",
+    "source": "JEE Main 2018 (Offline)",
+    "question": "\\[ \\int_{-\\pi/2}^{\\pi/2} \\frac{\\sin^2 x}{1+2^{x}}\\,dx \\]",
+    "solution": "Add the integral to its own \\(x\\to-x\\) copy:\\n        \\[ 2I=\\int_{-\\pi/2}^{\\pi/2}\\sin^2x\\left(\\frac1{1+2^x}+\\frac1{1+2^{-x}}\\right)dx \\]\\n        The bracket collapses to \\(1\\) (since \\(\\frac1{1+2^{-x}}=\\frac{2^x}{1+2^x}\\)), leaving \\(2I=\\int_{-\\pi/2}^{\\pi/2}\\sin^2x\\,dx\\), an even integrand. So \\(I=\\int_0^{\\pi/2}\\sin^2x\\,dx=\\dfrac\\pi4\\).",
+    "answer": "\\(\\dfrac{\\pi}{4}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\dfrac{1}{1+a^x}+\\dfrac{1}{1+a^{-x}}=1\\) for any base \\(a\\) — the standard move whenever an exponential with no obvious antiderivative sits in the denominator over a symmetric interval.",
+    "technique_ids": [
+      "02",
+      "03"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q4",
+    "source": "AIEEE 2011",
+    "question": "\\[ \\int_0^1 \\frac{8\\ln(1+x)}{1+x^2}\\,dx \\]",
+    "solution": "Substitute \\(x=\\tan\\theta\\): the integral becomes \\(8\\displaystyle\\int_0^{\\pi/4}\\ln(1+\\tan\\theta)\\,d\\theta\\). Let \\(\\theta\\to\\frac\\pi4-\\theta\\): \\(\\tan\\left(\\frac\\pi4-\\theta\\right)=\\dfrac{1-\\tan\\theta}{1+\\tan\\theta}\\), so \\(1+\\tan\\left(\\frac\\pi4-\\theta\\right)=\\dfrac{2}{1+\\tan\\theta}\\). Adding the two forms of the inner integral gives \\(2J=\\dfrac\\pi4\\ln2\\), so \\(J=\\dfrac\\pi8\\ln2\\), and the answer is \\(8J=\\pi\\ln2\\).",
+    "answer": "\\(\\pi\\ln 2\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\dfrac{1}{1+x^2}dx\\) is the standard cue for \\(x=\\tan\\theta\\) — try that substitution first and see whether the result is a King's-rule integral in disguise.",
+    "technique_ids": [
+      "18",
+      "01"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q5",
+    "source": "AIEEE 2002",
+    "question": "\\[ \\int_0^{10\\pi} |\\sin x|\\,dx \\]",
+    "solution": "\\(|\\sin x|\\) has period \\(\\pi\\), and \\(\\int_0^\\pi \\sin x\\,dx=2\\) (since \\(\\sin x\\ge0\\) there). So \\(\\int_0^{10\\pi}|\\sin x|\\,dx=10\\displaystyle\\int_0^\\pi\\sin x\\,dx=20\\).",
+    "answer": "20",
+    "tip": "💡 <strong>Quick tip:</strong> \\(|\\sin x|\\) and \\(|\\cos x|\\) are \\(\\pi\\)-periodic, not \\(2\\pi\\)-periodic — using the smaller period cuts the work in half.",
+    "technique_ids": [
+      "04"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q6",
+    "source": "JEE Main 2015 (Offline)",
+    "question": "\\[ \\int_2^4 \\frac{\\log(x^2)}{\\log(x^2)+\\log(36-12x+x^2)}\\,dx \\]",
+    "solution": "Notice \\(36-12x+x^2=(6-x)^2\\), so the integrand is \\(f(x)=\\dfrac{\\log(x^2)}{\\log(x^2)+\\log((6-x)^2)}\\). With \\(a=2,\\ b=4\\), the King's-rule partner is \\(a+b-x=6-x\\): \\(f(6-x)=\\dfrac{\\log((6-x)^2)}{\\log((6-x)^2)+\\log(x^2)}=1-f(x)\\). Adding \\(I=\\int f\\) and \\(I=\\int f(6-x)=\\int(1-f)\\) gives \\(2I=\\int_2^4 1\\,dx=2\\), so \\(I=1\\).",
+    "answer": "1",
+    "tip": "💡 <strong>Quick tip:</strong> Whenever the denominator is the numerator plus a King's-rule-shifted twin, \\(f(x)+f(a+b-x)\\) is what you should compute first — here it's exactly \\(1\\).",
+    "technique_ids": [
+      "01",
+      "11"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q7",
+    "source": "JEE Main 2021 (26th February Morning Shift)",
+    "question": "\\[ \\int_{-\\pi/2}^{\\pi/2} \\frac{\\cos^2 x}{1+3^{x}}\\,dx \\]",
+    "solution": "Same trick as the \\(2^x\\) version: add the integral to its \\(x\\to-x\\) copy. The bracket \\(\\frac1{1+3^x}+\\frac1{1+3^{-x}}\\) collapses to \\(1\\), leaving \\(2I=\\int_{-\\pi/2}^{\\pi/2}\\cos^2x\\,dx\\). So \\(I=\\int_0^{\\pi/2}\\cos^2x\\,dx=\\dfrac\\pi4\\).",
+    "answer": "\\(\\dfrac{\\pi}{4}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> The base of the exponential (2, 3, or any \\(a>0\\)) never matters for this trick — only that \\(\\frac1{1+a^x}+\\frac1{1+a^{-x}}=1\\).",
+    "technique_ids": [
+      "02",
+      "03"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q8",
+    "source": "JEE Main 2013 (Offline)",
+    "question": "\\[ \\int_{\\pi/6}^{\\pi/3} \\frac{dx}{1+\\sqrt{\\tan x}} \\]",
+    "solution": "Let \\(x\\to\\frac{\\pi}{6}+\\frac{\\pi}{3}-x=\\frac\\pi2-x\\): \\(\\tan\\left(\\frac\\pi2-x\\right)=\\cot x=\\dfrac1{\\tan x}\\), so \\(1+\\sqrt{\\tan(\\frac\\pi2-x)}=1+\\dfrac1{\\sqrt{\\tan x}}=\\dfrac{\\sqrt{\\tan x}+1}{\\sqrt{\\tan x}}\\). Adding the original integrand \\(\\frac1{1+\\sqrt{\\tan x}}\\) to this transformed one gives exactly \\(1\\), so \\(2I=\\int_{\\pi/6}^{\\pi/3}1\\,dx=\\dfrac\\pi6\\), giving \\(I=\\dfrac\\pi{12}\\).",
+    "answer": "\\(\\dfrac{\\pi}{12}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> When you see \\(\\dfrac1{1+\\sqrt{g(x)}}\\), check whether King's rule turns \\(g(x)\\) into \\(1/g(x)\\) — that's exactly what makes the two copies add to \\(1\\).",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q9",
+    "source": "AIEEE 2005",
+    "question": "Let \\(f:\\mathbb R\\to\\mathbb R\\) be differentiable with \\(f(2)=6\\) and \\(f'(2)=\\dfrac1{48}\\). Find \\(\\displaystyle\\lim_{x\\to2}\\frac{1}{x-2}\\int_6^{f(x)} 4t^3\\,dt\\).",
+    "solution": "The antiderivative of \\(4t^3\\) is \\(t^4\\), so the integral equals \\(f(x)^4-6^4=f(x)^4-1296\\). As \\(x\\to2\\), both this and \\(x-2\\) go to \\(0\\), so apply L'Hôpital: differentiate the numerator using the chain rule (FTC), \\(\\frac{d}{dx}\\left[f(x)^4-1296\\right]=4f(x)^3f'(x)\\). At \\(x=2\\): \\(4\\cdot6^3\\cdot\\dfrac1{48}=4\\cdot216\\cdot\\dfrac1{48}=18\\).",
+    "answer": "18",
+    "tip": "💡 <strong>Quick tip:</strong> A variable upper limit inside a 0/0 limit is almost always solved by evaluating the integral's antiderivative first, then differentiating — don't try to compute the integral directly.",
+    "technique_ids": [
+      "15"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q10",
+    "source": "IIT-JEE 1985",
+    "question": "\\[ \\int_0^{\\pi/2} \\frac{x\\sin x\\cos x}{\\cos^4 x+\\sin^4 x}\\,dx \\]",
+    "solution": "Swap \\(x\\to\\frac\\pi2-x\\): the denominator is unchanged, giving \\(2I=\\dfrac\\pi2\\displaystyle\\int_0^{\\pi/2}\\dfrac{\\sin x\\cos x}{\\sin^4x+\\cos^4x}dx\\). Using \\(\\sin^4x+\\cos^4x=1-\\tfrac12\\sin^22x\\) and \\(u=\\cos2x\\), that integral evaluates to \\(\\dfrac\\pi4\\). So \\(2I=\\dfrac\\pi2\\cdot\\dfrac\\pi4=\\dfrac{\\pi^2}{8}\\), giving \\(I=\\dfrac{\\pi^2}{16}\\).",
+    "answer": "\\(\\dfrac{\\pi^2}{16}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\sin^4x+\\cos^4x=1-\\frac12\\sin^22x\\) is worth memorizing — it turns messy quartic denominators into a single \\(\\sin2x\\) term.",
+    "technique_ids": [
+      "01",
+      "17"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q11",
+    "source": "IIT-JEE 2006",
+    "question": "Find the value of \\(5050\\,\\dfrac{I_1}{I_2}\\), where \\(I_1=\\displaystyle\\int_0^1(1-x^{50})^{100}dx\\) and \\(I_2=\\displaystyle\\int_0^1(1-x^{50})^{101}dx\\).",
+    "solution": "Let \\(u=x^{50}\\); this is a Beta-family ratio in disguise. Integrating \\(I_1\\) by parts (peeling off one factor of \\((1-x^{50})\\) and using \\(x=x\\)) produces a reduction relation between consecutive \\(I_n\\)'s of exactly this type, giving \\(\\dfrac{I_1}{I_2}=\\dfrac{5051}{5050}\\). So \\(5050\\cdot\\dfrac{5051}{5050}=5051\\).",
+    "answer": "5051",
+    "tip": "💡 <strong>Quick tip:</strong> Ratios of the form \\(\\int_0^1(1-x^k)^n dx\\) for consecutive \\(n\\) are reduction-formula problems — the algebra is identical in spirit to \\(I_n=\\int\\tan^nx\\,dx\\), just with a different building block.",
+    "technique_ids": [
+      "06",
+      "13"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q12",
+    "source": "IIT-JEE 1998",
+    "question": "Given that \\(\\displaystyle\\int_0^1\\tan^{-1}\\!\\left(\\frac1{1-x+x^2}\\right)dx=2\\int_0^1\\tan^{-1}x\\,dx\\), evaluate \\(\\displaystyle\\int_0^1\\tan^{-1}(1-x+x^2)\\,dx\\).",
+    "solution": "Since \\(1-x+x^2>0\\) for all real \\(x\\), \\(\\tan^{-1}(1-x+x^2)+\\tan^{-1}\\!\\left(\\dfrac1{1-x+x^2}\\right)=\\dfrac\\pi2\\). Integrating over \\([0,1]\\) and using the given identity:\\n        \\[ \\int_0^1\\tan^{-1}(1-x+x^2)dx = \\frac\\pi2 - 2\\int_0^1\\tan^{-1}x\\,dx \\]\\n        Since \\(\\int_0^1\\tan^{-1}x\\,dx=\\left[x\\tan^{-1}x-\\tfrac12\\ln(1+x^2)\\right]_0^1=\\dfrac\\pi4-\\dfrac12\\ln2\\), the answer is \\(\\dfrac\\pi2-\\left(\\dfrac\\pi2-\\ln2\\right)=\\ln2\\).",
+    "answer": "\\(\\ln 2\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\tan^{-1}A+\\tan^{-1}(1/A)=\\frac\\pi2\\) for \\(A>0\\) turns a hard \\(\\tan^{-1}\\) integral into a known one — look for a positive expression paired with its reciprocal.",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q13",
+    "source": "IIT-JEE 2001 Screening",
+    "question": "For \\(a>0\\), evaluate \\[ \\int_{-\\pi}^{\\pi} \\frac{\\cos^2 x}{1+a^{x}}\\,dx \\]",
+    "solution": "Add the integral to its \\(x\\to-x\\) copy: \\(2I=\\displaystyle\\int_{-\\pi}^{\\pi}\\cos^2x\\left(\\dfrac1{1+a^x}+\\dfrac1{1+a^{-x}}\\right)dx=\\int_{-\\pi}^{\\pi}\\cos^2x\\,dx\\), since the bracket collapses to \\(1\\) regardless of \\(a\\). So \\(I=\\displaystyle\\int_0^\\pi\\cos^2x\\,dx=\\dfrac\\pi2\\).",
+    "answer": "\\(\\dfrac{\\pi}{2}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> This \\(1/(1+a^x)\\) symmetry trick works for any positive base \\(a\\) — the answer never depends on \\(a\\) at all.",
+    "technique_ids": [
+      "02",
+      "03"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q14",
+    "source": "IIT-JEE 1993",
+    "question": "\\[ \\int_0^{\\pi/2} \\frac{dx}{1+\\tan^3 x} \\]",
+    "solution": "Let \\(x\\to\\frac\\pi2-x\\): \\(\\tan\\left(\\frac\\pi2-x\\right)=\\cot x\\), so the transformed integrand is \\(\\dfrac1{1+\\cot^3x}=\\dfrac{\\tan^3x}{\\tan^3x+1}\\). Adding this to the original integrand \\(\\dfrac1{1+\\tan^3x}\\) gives exactly \\(1\\). So \\(2I=\\int_0^{\\pi/2}1\\,dx=\\dfrac\\pi2\\), giving \\(I=\\dfrac\\pi4\\).",
+    "answer": "\\(\\dfrac{\\pi}{4}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\dfrac1{1+g(x)}\\) paired with \\(\\dfrac1{1+1/g(x)}\\) always sums to \\(1\\) — recognize this shape before trying to integrate \\(\\tan^3x\\) directly.",
+    "technique_ids": [
+      "02"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q15",
+    "source": "IIT-JEE 1994",
+    "question": "\\[ \\int_2^3 \\frac{\\sqrt x}{\\sqrt{5-x}+\\sqrt x}\\,dx \\]",
+    "solution": "This is the f/(f+f∘shift) trick with \\(a=2,\\,b=3\\), so \\(a+b-x=5-x\\) and \\(f(x)=\\sqrt x\\). Directly: \\(I=\\dfrac{b-a}2=\\dfrac{3-2}2=\\dfrac12\\).",
+    "answer": "\\(\\dfrac{1}{2}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> Whenever the denominator is \\(f(x)+f(a+b-x)\\) for the exact interval \\([a,b]\\), the integral is just \\((b-a)/2\\) — no algebra needed at all.",
+    "technique_ids": [
+      "11"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q16",
+    "source": "IIT-JEE 1999",
+    "question": "\\[ \\int_{\\pi/4}^{3\\pi/4} \\frac{dx}{1+\\cos x} \\]",
+    "solution": "Use \\(1+\\cos x=2\\cos^2(x/2)\\), so the integrand is \\(\\dfrac12\\sec^2(x/2)\\), whose antiderivative is \\(\\tan(x/2)\\). Evaluating: \\(\\left[\\tan\\dfrac x2\\right]_{\\pi/4}^{3\\pi/4}=\\tan\\dfrac{3\\pi}8-\\tan\\dfrac\\pi8=(1+\\sqrt2)-(\\sqrt2-1)=2\\).",
+    "answer": "2",
+    "tip": "💡 <strong>Quick tip:</strong> \\(1+\\cos x=2\\cos^2(x/2)\\) and \\(1-\\cos x=2\\sin^2(x/2)\\) turn awkward \\(1\\pm\\cos x\\) denominators into a clean \\(\\sec^2\\) or \\(\\csc^2\\) form.",
+    "technique_ids": [
+      "16",
+      "18"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q17",
+    "source": "IIT-JEE 1997",
+    "question": "\\[ \\int_{-\\pi}^{\\pi} \\frac{2x(1+\\sin x)}{1+\\cos^2 x}\\,dx \\]",
+    "solution": "Split into \\(\\dfrac{2x}{1+\\cos^2x}+\\dfrac{2x\\sin x}{1+\\cos^2x}\\). The first term is odd (odd \\(\\times\\) even) so it vanishes over \\([-\\pi,\\pi]\\). The second term is even, so \\(I=2\\displaystyle\\int_0^\\pi\\dfrac{2x\\sin x}{1+\\cos^2x}dx\\). Apply King's rule (\\(x\\to\\pi-x\\)) to that piece to strip off the lone \\(x\\), reducing it to \\(2\\pi\\displaystyle\\int_0^\\pi\\dfrac{\\sin x}{1+\\cos^2x}dx\\) minus itself; solving gives \\(\\displaystyle\\int_0^\\pi\\dfrac{x\\sin x}{1+\\cos^2x}dx=\\dfrac{\\pi^2}4\\), so the full answer is \\(4\\times\\dfrac{\\pi^2}4=\\pi^2\\).",
+    "answer": "\\(\\pi^2\\)",
+    "tip": "💡 <strong>Quick tip:</strong> Split a mixed integrand into an odd piece (which vanishes) and an even piece first — it's often much less work than applying King's rule to the whole expression at once.",
+    "technique_ids": [
+      "01",
+      "03"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q18",
+    "source": "JEE Advanced 2016 Paper 2",
+    "question": "\\[ \\int_{-\\pi/2}^{\\pi/2} \\frac{x^2\\cos x}{1+e^x}\\,dx \\]",
+    "solution": "Add the integral to its \\(x\\to-x\\) copy: \\(2I=\\displaystyle\\int_{-\\pi/2}^{\\pi/2}x^2\\cos x\\left(\\dfrac1{1+e^x}+\\dfrac1{1+e^{-x}}\\right)dx=\\int_{-\\pi/2}^{\\pi/2}x^2\\cos x\\,dx\\), an even integrand. So \\(I=\\displaystyle\\int_0^{\\pi/2}x^2\\cos x\\,dx\\). Integrating by parts twice: \\(\\left[x^2\\sin x+2x\\cos x-2\\sin x\\right]_0^{\\pi/2}=\\dfrac{\\pi^2}4-2\\).",
+    "answer": "\\(\\dfrac{\\pi^2}{4}-2\\)",
+    "tip": "💡 <strong>Quick tip:</strong> The \\(1/(1+e^x)\\) symmetry trick works with any even function multiplying it, no matter how complicated — it just needs one round of integration by parts afterward.",
+    "technique_ids": [
+      "02",
+      "03"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q19",
+    "source": "BITSAT 2025",
+    "question": "\\[ \\int_0^{\\pi} \\ln(\\sin x)\\,dx \\]",
+    "solution": "Let \\(x\\to\\pi-x\\): \\(\\sin(\\pi-x)=\\sin x\\), so King's rule alone doesn't simplify it directly — instead split at \\(\\pi/2\\) and substitute \\(x\\to\\pi-x\\) on the second half to show both halves equal \\(\\int_0^{\\pi/2}\\ln(\\sin x)dx\\). Then use \\(\\sin x=2\\sin(x/2)\\cos(x/2)\\) to relate \\(\\int_0^{\\pi/2}\\ln(\\sin x)dx\\) to itself plus a \\(\\ln2\\) term, giving \\(\\int_0^{\\pi/2}\\ln(\\sin x)dx=-\\dfrac\\pi2\\ln2\\). Doubling: \\(\\int_0^\\pi\\ln(\\sin x)dx=-\\pi\\ln2\\).",
+    "answer": "\\(-\\pi\\ln 2\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\int_0^{\\pi/2}\\ln(\\sin x)dx=\\int_0^{\\pi/2}\\ln(\\cos x)dx=-\\frac\\pi2\\ln2\\) is a famous standard result — memorize it rather than re-deriving it under time pressure.",
+    "technique_ids": [
+      "01",
+      "04"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q20",
+    "source": "BITSAT 2024",
+    "question": "\\[ \\int_0^{\\infty} \\frac{dx}{(x^2+a^2)(x^2+b^2)} \\quad (a\\neq b) \\]",
+    "solution": "Partial fractions: \\(\\dfrac1{(x^2+a^2)(x^2+b^2)}=\\dfrac1{b^2-a^2}\\left(\\dfrac1{x^2+a^2}-\\dfrac1{x^2+b^2}\\right)\\). Each piece integrates to a \\(\\tan^{-1}\\) form: \\(\\displaystyle\\int_0^\\infty\\dfrac{dx}{x^2+a^2}=\\dfrac\\pi{2a}\\). So the answer is \\(\\dfrac1{b^2-a^2}\\left(\\dfrac\\pi{2a}-\\dfrac\\pi{2b}\\right)=\\dfrac\\pi{2ab(a+b)}\\).",
+    "answer": "\\(\\dfrac{\\pi}{2ab(a+b)}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\int_0^\\infty\\frac{dx}{x^2+c^2}=\\frac{\\pi}{2c}\\) is worth memorizing outright — it turns this whole problem into partial fractions plus substitution.",
+    "technique_ids": [
+      "16"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q21",
+    "source": "BITSAT 2024",
+    "question": "\\[ \\int_0^{\\pi/2} \\ln(\\tan x)\\,dx \\]",
+    "solution": "Let \\(x\\to\\frac\\pi2-x\\): \\(\\tan\\left(\\frac\\pi2-x\\right)=\\cot x=\\dfrac1{\\tan x}\\), so \\(\\ln(\\tan(\\frac\\pi2-x))=-\\ln(\\tan x)\\). This means \\(I=-I\\), which forces \\(I=0\\).",
+    "answer": "0",
+    "tip": "💡 <strong>Quick tip:</strong> Whenever King's rule turns the integrand into its exact negative, the answer is \\(0\\) without any further work.",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q22",
+    "source": "BITSAT 2021",
+    "question": "\\[ \\int_0^1 \\frac{\\log(1+x)}{1+x^2}\\,dx \\]",
+    "solution": "Substitute \\(x=\\tan\\theta\\): the integral becomes \\(\\displaystyle\\int_0^{\\pi/4}\\ln(1+\\tan\\theta)\\,d\\theta\\). Let \\(\\theta\\to\\frac\\pi4-\\theta\\): \\(1+\\tan\\left(\\frac\\pi4-\\theta\\right)=\\dfrac2{1+\\tan\\theta}\\). Adding the two forms gives \\(2I=\\dfrac\\pi4\\ln2\\), so \\(I=\\dfrac\\pi8\\ln2\\).",
+    "answer": "\\(\\dfrac{\\pi}{8}\\ln 2\\)",
+    "tip": "💡 <strong>Quick tip:</strong> This exact integral shows up across multiple boards and years — recognizing \\(x=\\tan\\theta\\) followed by King's rule turns it into a two-line solution.",
+    "technique_ids": [
+      "18",
+      "01"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q23",
+    "source": "BITSAT 2020",
+    "question": "\\[ \\int_0^{\\pi/2} \\frac{dx}{\\tan x+\\cot x+\\csc x+\\sec x} \\]",
+    "solution": "Simplify the denominator: \\(\\tan x+\\cot x=\\dfrac1{\\sin x\\cos x}\\) and \\(\\sec x+\\csc x=\\dfrac{\\sin x+\\cos x}{\\sin x\\cos x}\\), so the whole expression is \\(\\dfrac{1+\\sin x+\\cos x}{\\sin x\\cos x}\\), making the integrand \\(\\dfrac{\\sin x\\cos x}{1+\\sin x+\\cos x}\\). The Weierstrass substitution \\(t=\\tan(x/2)\\) turns this into \\(\\displaystyle\\int_0^1\\dfrac{2t(1-t)}{(1+t^2)^2}dt\\), which evaluates to \\(1-\\dfrac\\pi4\\).",
+    "answer": "\\(1-\\dfrac{\\pi}{4}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> Whenever \\(\\tan x,\\cot x,\\sec x,\\csc x\\) all appear together, simplify to a single fraction in \\(\\sin x,\\cos x\\) first — it usually collapses into something the Weierstrass substitution can handle cleanly.",
+    "technique_ids": [
+      "18"
+    ],
+    "difficulty": 5,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q24",
+    "source": "KCET 2021",
+    "question": "If \\(I_n=\\displaystyle\\int_0^{\\pi/4}\\tan^n x\\,dx\\) for positive integer \\(n\\), find \\(I_{10}+I_8\\).",
+    "solution": "For any \\(n\\ge2\\): \\(I_n+I_{n-2}=\\displaystyle\\int_0^{\\pi/4}\\tan^{n-2}x(\\tan^2x+1)\\,dx=\\int_0^{\\pi/4}\\tan^{n-2}x\\sec^2x\\,dx=\\left[\\dfrac{\\tan^{n-1}x}{n-1}\\right]_0^{\\pi/4}=\\dfrac1{n-1}\\). Taking \\(n=10\\): \\(I_{10}+I_8=\\dfrac1{9}\\).",
+    "answer": "\\(\\dfrac{1}{9}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> If a question asks for \\(I_n+I_{n-2}\\) rather than \\(I_n\\) alone, derive the one-line recursion \\(\\frac1{n-1}\\) instead of computing either integral outright.",
+    "technique_ids": [
+      "06"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q25",
+    "source": "KCET 2021",
+    "question": "\\[ \\int_0^{4042} \\frac{\\sqrt x}{\\sqrt x+\\sqrt{4042-x}}\\,dx \\]",
+    "solution": "This is the f/(f+f∘shift) trick with \\(a=0,\\,b=4042\\) and \\(f(x)=\\sqrt x\\), since \\(a+b-x=4042-x\\). Directly: \\(I=\\dfrac{b-a}2=\\dfrac{4042}2=2021\\).",
+    "answer": "2021",
+    "tip": "💡 <strong>Quick tip:</strong> Large, ugly-looking numbers like 4042 are often a disguise for \\(2\\times2021\\) — check whether the denominator is \\(f(x)+f(a+b-x)\\) before reaching for a substitution.",
+    "technique_ids": [
+      "11"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q26",
+    "source": "KCET 2020",
+    "question": "\\[ \\int_{-\\pi/2}^{\\pi/2} \\frac{\\cos x}{1+e^{x}}\\,dx \\]",
+    "solution": "Add the integral to its \\(x\\to-x\\) copy: \\(2I=\\displaystyle\\int_{-\\pi/2}^{\\pi/2}\\cos x\\left(\\dfrac1{1+e^x}+\\dfrac1{1+e^{-x}}\\right)dx=\\int_{-\\pi/2}^{\\pi/2}\\cos x\\,dx=2\\). So \\(I=1\\).",
+    "answer": "1",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\dfrac1{1+e^x}+\\dfrac1{1+e^{-x}}=1\\) is the single identity behind most \\(1/(1+e^x)\\)-type integrals over symmetric intervals.",
+    "technique_ids": [
+      "02",
+      "03"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q27",
+    "source": "KCET 2019",
+    "question": "\\[ \\int_{-3}^{3} \\cot^{-1} x\\,dx \\]",
+    "solution": "Since \\(\\cot^{-1}x\\) has range \\((0,\\pi)\\), \\(\\cot^{-1}x+\\cot^{-1}(-x)=\\pi\\) for all real \\(x\\). Pairing \\(x\\) with \\(-x\\) over the symmetric interval: \\(I=\\displaystyle\\int_0^3\\left[\\cot^{-1}x+\\cot^{-1}(-x)\\right]dx=\\int_0^3\\pi\\,dx=3\\pi\\).",
+    "answer": "\\(3\\pi\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\cot^{-1}x\\) is not odd (unlike \\(\\tan^{-1}x\\)) because of its range convention — use \\(\\cot^{-1}x+\\cot^{-1}(-x)=\\pi\\) instead of assuming symmetry cancels it out.",
+    "technique_ids": [
+      "03"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "kcet",
+    "exam_name": "KCET",
+    "qid": "Q28",
+    "source": "KCET 2017",
+    "question": "For positive constants \\(a,b\\), evaluate \\[ \\int_0^{\\pi/2} \\frac{dx}{a^2\\sin^2 x+b^2\\cos^2 x} \\]",
+    "solution": "Divide numerator and denominator by \\(\\cos^2x\\): the integral becomes \\(\\displaystyle\\int_0^{\\pi/2}\\dfrac{\\sec^2x\\,dx}{a^2\\tan^2x+b^2}\\). Substitute \\(u=\\tan x\\) (\\(u:0\\to\\infty\\)): \\(\\displaystyle\\int_0^\\infty\\dfrac{du}{a^2u^2+b^2}=\\dfrac1{ab}\\left[\\tan^{-1}\\dfrac{au}b\\right]_0^\\infty=\\dfrac1{ab}\\cdot\\dfrac\\pi2=\\dfrac\\pi{2ab}\\).",
+    "answer": "\\(\\dfrac{\\pi}{2ab}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(a^2\\sin^2x+b^2\\cos^2x\\) is a classic \\(u=\\tan x\\) setup — dividing by \\(\\cos^2x\\) turns trig into algebra immediately.",
+    "technique_ids": [
+      "18"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "apcalc",
+    "exam_name": "AP Calculus AB",
+    "qid": "Q29",
+    "source": "AP Calculus AB 2022 Free-Response (Q2, adapted)",
+    "question": "From 5 A.M. to 10 A.M., vehicles arrive at a toll plaza at a rate \\(A(t)=450\\sin(0.62t)\\) vehicles per hour, where \\(t\\) is hours after 5 A.M. Find the total number of vehicles that arrive from 6 A.M. (\\(t=1\\)) to 10 A.M. (\\(t=5\\)).",
+    "solution": "Total arrivals \\(=\\displaystyle\\int_1^5 450\\sin(0.62t)\\,dt=\\left[-\\dfrac{450}{0.62}\\cos(0.62t)\\right]_1^5\\approx1315.897\\) vehicles.",
+    "answer": "≈ 1315.897 vehicles",
+    "tip": "💡 <strong>Quick tip:</strong> \\\"Total number that arrive\\\" over an interval is the definite integral of the rate function — you don't need to solve for a position function first.",
+    "technique_ids": [
+      "16"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "apcalc",
+    "exam_name": "AP Calculus AB",
+    "qid": "Q30",
+    "source": "AP Calculus AB 2022 Free-Response (Q2, adapted)",
+    "question": "Using the toll-plaza arrival rate \\(A(t)=450\\sin(0.62t)\\), find the average rate at which vehicles arrive between 6 A.M. (\\(t=1\\)) and 10 A.M. (\\(t=5\\)).",
+    "solution": "Average value \\(=\\dfrac1{5-1}\\displaystyle\\int_1^5 450\\sin(0.62t)\\,dt\\approx\\dfrac{1315.897}{4}\\approx328.974\\) vehicles per hour.",
+    "answer": "≈ 328.974 vehicles/hour",
+    "tip": "💡 <strong>Quick tip:</strong> Average value \\(=\\dfrac1{b-a}\\int_a^b f(t)dt\\) reuses the same integral you'd compute for a \\\"total\\\" question — just divide by the length of the interval.",
+    "technique_ids": [
+      "14"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "apcalc",
+    "exam_name": "AP Calculus AB",
+    "qid": "Q31",
+    "source": "AP Calculus AB 1999 Free-Response Q1 (adapted)",
+    "question": "A particle moves along the \\(x\\)-axis with velocity \\(v(t)=t\\sin(t^2)\\) for \\(t\\ge0\\). Find the particle's total displacement from \\(t=0\\) to \\(t=\\sqrt\\pi\\).",
+    "solution": "Displacement \\(=\\displaystyle\\int_0^{\\sqrt\\pi} t\\sin(t^2)\\,dt\\). Let \\(u=t^2\\), \\(du=2t\\,dt\\): \\(=\\dfrac12\\displaystyle\\int_0^\\pi\\sin u\\,du=\\dfrac12\\left[-\\cos u\\right]_0^\\pi=\\dfrac12(1-(-1))=1\\).",
+    "answer": "1",
+    "tip": "💡 <strong>Quick tip:</strong> A lone \\(t\\) multiplying \\(\\sin(t^2)\\) or \\(\\cos(t^2)\\) is the standard cue for \\(u=t^2\\) — the extra factor of \\(t\\) is exactly what \\(du\\) needs.",
+    "technique_ids": [
+      "18"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "apcalc",
+    "exam_name": "AP Calculus AB",
+    "qid": "Q32",
+    "source": "AP Calculus AB 2014 Multiple Choice",
+    "question": "A particle moves along the \\(x\\)-axis with velocity \\(v(t)=\\sin(2t)\\). If the particle is at \\(x=4\\) when \\(t=0\\), find its position when \\(t=\\pi/2\\).",
+    "solution": "Position \\(=4+\\displaystyle\\int_0^{\\pi/2}\\sin(2t)\\,dt=4+\\left[-\\dfrac{\\cos(2t)}2\\right]_0^{\\pi/2}=4+\\left(\\dfrac12+\\dfrac12\\right)=5\\).",
+    "answer": "5",
+    "tip": "💡 <strong>Quick tip:</strong> Position \\(=\\) initial position \\(+\\) the definite integral of velocity over the elapsed time — this is the Fundamental Theorem of Calculus applied directly to motion.",
+    "technique_ids": [
+      "16"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "riemann",
+    "exam_name": "Riemann Sums",
+    "qid": "Q33",
+    "source": "BITSAT 2025",
+    "question": "Express \\(\\displaystyle\\int_a^b e^x\\,dx\\) as the limit of a Riemann sum, and evaluate it.",
+    "solution": "Partition \\([a,b]\\) into \\(n\\) equal strips of width \\(h=\\dfrac{b-a}n\\), sampling at the right endpoint \\(a+rh\\): \\(\\displaystyle\\int_a^b e^x dx=\\lim_{n\\to\\infty}h\\sum_{r=1}^n e^{a+rh}=\\lim_{n\\to\\infty}he^a\\sum_{r=1}^n(e^h)^r\\). The inner sum is geometric: \\(e^h\\dfrac{(e^h)^n-1}{e^h-1}=e^h\\dfrac{e^{n h}-1}{e^h-1}\\). Since \\(nh=b-a\\) is fixed, as \\(h\\to0\\) this becomes \\(e^a(e^{b-a}-1)\\cdot\\lim_{h\\to0}\\dfrac{h}{e^h-1}\\cdot e^h\\to e^a(e^{b-a}-1)=e^b-e^a\\).",
+    "answer": "\\(e^b-e^a\\)",
+    "tip": "💡 <strong>Quick tip:</strong> Building a definite integral from its Riemann-sum definition always ends in a geometric series when the integrand is exponential — the limit \\(\\frac{h}{e^h-1}\\to1\\) as \\(h\\to0\\) is the key simplification.",
+    "technique_ids": [
+      "08"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "riemann",
+    "exam_name": "Riemann Sums",
+    "qid": "Q34",
+    "source": "KCET 2022",
+    "question": "Evaluate \\(\\displaystyle\\int_2^3 x^2\\,dx\\) as the limit of a sum.",
+    "solution": "With \\(h=\\dfrac{3-2}n=\\dfrac1n\\) and right-endpoint sampling at \\(2+rh\\): \\(\\displaystyle\\int_2^3 x^2dx=\\lim_{n\\to\\infty}h\\sum_{r=1}^n(2+rh)^2=\\lim_{n\\to\\infty}h\\sum_{r=1}^n\\left(4+4rh+r^2h^2\\right)\\). Expanding using \\(\\sum r=\\frac{n(n+1)}2\\) and \\(\\sum r^2=\\frac{n(n+1)(2n+1)}6\\), and taking \\(n\\to\\infty\\) with \\(h=1/n\\), the sum simplifies to \\(4+4\\left(\\dfrac12\\right)+\\dfrac13=4+2+\\dfrac13=\\dfrac{19}3\\).",
+    "answer": "\\(\\dfrac{19}{3}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> For polynomial integrands, expand \\((a+rh)^2\\) fully and replace \\(\\sum r\\) and \\(\\sum r^2\\) with their closed forms before taking the limit — this matches the antiderivative check \\(\\left[\\frac{x^3}3\\right]_2^3=\\frac{19}3\\).",
+    "technique_ids": [
+      "08"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q35",
+    "source": "Cambridge IGCSE Additional Mathematics (0606) — past paper, Integration topic",
+    "question": "Find the exact value of \\[ \\int_2^4 \\frac{(x+1)^2}{x^2}\\,dx \\]",
+    "solution": "Expand the numerator and divide term by term: \\(\\dfrac{(x+1)^2}{x^2}=\\dfrac{x^2+2x+1}{x^2}=1+\\dfrac2x+\\dfrac1{x^2}\\). The antiderivative is \\(x+2\\ln x-\\dfrac1x\\). Evaluating:\\n        \\[ \\left[x+2\\ln x-\\frac1x\\right]_2^4=\\left(4+2\\ln4-\\frac14\\right)-\\left(2+2\\ln2-\\frac12\\right)=2+2\\ln2+\\frac14=\\ln4+\\frac94 \\]",
+    "answer": "\\(\\ln 4+\\dfrac{9}{4}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> Whenever you see a squared bracket over \\(x^2\\), expand the numerator first — it almost always turns into simple \\(x^n\\) terms you can integrate directly.",
+    "technique_ids": [
+      "16"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q36",
+    "source": "Cambridge IGCSE Additional Mathematics (0606) — past paper, Integration topic",
+    "question": "Given that \\(\\dfrac{d}{dx}(x\\cos x)=-x\\sin x+\\cos x\\), find the exact value of \\[ \\int_0^{\\pi/6} x\\sin x\\,dx \\]",
+    "solution": "Rearranging the given derivative: \\(x\\sin x=\\cos x-\\dfrac{d}{dx}(x\\cos x)\\), so \\(\\displaystyle\\int x\\sin x\\,dx=\\sin x-x\\cos x+C\\). Evaluating from \\(0\\) to \\(\\pi/6\\):\\n        \\[ \\left[\\sin x-x\\cos x\\right]_0^{\\pi/6}=\\left(\\frac12-\\frac\\pi6\\cdot\\frac{\\sqrt3}2\\right)-(0-0)=\\frac12-\\frac{\\sqrt3\\pi}{12} \\]",
+    "answer": "\\(\\dfrac{1}{2}-\\dfrac{\\sqrt3\\,\\pi}{12}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> When a question hands you a derivative you didn't ask for, it's almost always the reverse-product-rule shortcut to the antiderivative you need — rearrange it before reaching for integration by parts.",
+    "technique_ids": [
+      "16"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q37",
+    "source": "Cambridge IGCSE Additional Mathematics (0606) — past paper, Integration topic",
+    "question": "Find \\[ \\int_3^5 \\left(\\frac1{x-1}-\\frac1{(x-1)^2}\\right)dx \\] giving your answer in the form \\(a+\\ln b\\), where \\(a\\) and \\(b\\) are rational numbers.",
+    "solution": "Integrate term by term: \\(\\displaystyle\\int\\frac{dx}{x-1}=\\ln|x-1|\\) and \\(\\displaystyle\\int\\frac{dx}{(x-1)^2}=-\\frac1{x-1}\\). So the antiderivative is \\(\\ln|x-1|+\\dfrac1{x-1}\\). Evaluating:\\n        \\[ \\left[\\ln|x-1|+\\frac1{x-1}\\right]_3^5=\\left(\\ln4+\\frac14\\right)-\\left(\\ln2+\\frac12\\right)=\\ln2-\\frac14 \\]",
+    "answer": "\\(-\\dfrac14+\\ln 2\\)",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\dfrac1{(x-1)^2}\\) integrates to \\(-\\dfrac1{x-1}\\), not a logarithm — only the power \\(-1\\) gives a \\(\\ln\\); every other power uses the ordinary power rule.",
+    "technique_ids": [
+      "16"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "igcse",
+    "exam_name": "Cambridge IGCSE",
+    "qid": "Q38",
+    "source": "Cambridge IGCSE Additional Mathematics (0606) — past paper, Integration topic",
+    "question": "Find the exact value of \\[ \\int_0^{\\pi/3} \\left(\\sin\\!\\left(2x+\\frac\\pi3\\right)-1+\\cos 2x\\right)dx \\]",
+    "solution": "Integrate each term separately: \\(\\displaystyle\\int\\sin\\!\\left(2x+\\tfrac\\pi3\\right)dx=-\\tfrac12\\cos\\!\\left(2x+\\tfrac\\pi3\\right)\\), \\(\\displaystyle\\int(-1)dx=-x\\), and \\(\\displaystyle\\int\\cos2x\\,dx=\\tfrac12\\sin2x\\). So the antiderivative is \\(-\\dfrac12\\cos\\!\\left(2x+\\dfrac\\pi3\\right)-x+\\dfrac12\\sin2x\\). Evaluating from \\(0\\) to \\(\\pi/3\\):\\n        \\[ \\left(-\\frac12\\cos\\pi-\\frac\\pi3+\\frac12\\sin\\frac{2\\pi}3\\right)-\\left(-\\frac12\\cos\\frac\\pi3-0+0\\right)=\\left(\\frac12-\\frac\\pi3+\\frac{\\sqrt3}4\\right)-\\left(-\\frac14\\right)=\\frac34+\\frac{\\sqrt3}4-\\frac\\pi3 \\]",
+    "answer": "\\(\\dfrac34+\\dfrac{\\sqrt3}4-\\dfrac{\\pi}{3}\\)",
+    "tip": "💡 <strong>Quick tip:</strong> Integrate a sum of trig terms one piece at a time — don't try to combine \\(\\sin(2x+\\pi/3)\\) and \\(\\cos2x\\) into a single expression before integrating, it's not necessary and easy to get wrong.",
+    "technique_ids": [
+      "17"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D04-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{4\\pi} |\\cos x|\\,dx \\]",
+    "solution": "\\(|\\cos x|\\) has period \\(\\pi\\), and \\(\\int_0^\\pi|\\cos x|dx=2\\) (two equal lobes of area 1 each). So \\(\\int_0^{4\\pi}|\\cos x|dx=4\\times2=8\\).",
+    "answer": "8",
+    "tip": "💡 <strong>Quick tip:</strong> \\(|\\cos x|\\) is \\(\\pi\\)-periodic just like \\(|\\sin x|\\) — always look for the smaller hidden period before integrating directly.",
+    "technique_ids": [
+      "04"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D04-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{6\\pi} \\sin^2 x\\,dx \\]",
+    "solution": "\\(\\sin^2x\\) has period \\(\\pi\\) (not \\(2\\pi\\)), and \\(\\int_0^\\pi\\sin^2x\\,dx=\\dfrac\\pi2\\). So \\(\\int_0^{6\\pi}\\sin^2x\\,dx=6\\times\\dfrac\\pi2=3\\pi\\).",
+    "answer": "3π",
+    "tip": "💡 <strong>Quick tip:</strong> Squaring a trig function often halves its period — check \\(f(x+\\pi)=f(x)\\) before assuming the \\(2\\pi\\) period of \\(\\sin x\\) itself applies.",
+    "technique_ids": [
+      "04"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D04-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_5^{5+2\\pi} \\sin x\\,dx \\]",
+    "solution": "\\(\\sin x\\) is \\(2\\pi\\)-periodic, and the integral over any full period is always \\(0\\), regardless of where that period starts. So this integral is \\(0\\) without any computation.",
+    "answer": "0",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\int_a^{a+T}f(x)dx\\) is the same for every \\(a\\) when \\(f\\) is \\(T\\)-periodic — for \\(\\sin x\\), that constant value is always \\(0\\).",
+    "technique_ids": [
+      "04"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D05-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/2} \\sin^4 x\\,dx \\]",
+    "solution": "Wallis' formula for even \\(n=4\\): \\(\\dfrac{3\\cdot1}{4\\cdot2}\\cdot\\dfrac\\pi2=\\dfrac38\\cdot\\dfrac\\pi2=\\dfrac{3\\pi}{16}\\).",
+    "answer": "3π/16",
+    "tip": "💡 <strong>Quick tip:</strong> For even \\(n\\), multiply the alternating chain down to \\(1\\) and finish with \\(\\times\\pi/2\\) — no integration required.",
+    "technique_ids": [
+      "05"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D05-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/2} \\cos^6 x\\,dx \\]",
+    "solution": "Wallis' formula for even \\(n=6\\): \\(\\dfrac{5\\cdot3\\cdot1}{6\\cdot4\\cdot2}\\cdot\\dfrac\\pi2=\\dfrac{15}{48}\\cdot\\dfrac\\pi2=\\dfrac{5\\pi}{32}\\).",
+    "answer": "5π/32",
+    "tip": "💡 <strong>Quick tip:</strong> Remember \\(\\int_0^{\\pi/2}\\cos^nx\\,dx=\\int_0^{\\pi/2}\\sin^nx\\,dx\\) — the formula is identical for either function.",
+    "technique_ids": [
+      "05"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D05-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/2} \\sin^7 x\\,dx \\]",
+    "solution": "Wallis' formula for odd \\(n=7\\): \\(\\dfrac{6\\cdot4\\cdot2}{7\\cdot5\\cdot3}=\\dfrac{48}{105}=\\dfrac{16}{35}\\) (no \\(\\pi/2\\) factor for odd \\(n\\)).",
+    "answer": "16/35",
+    "tip": "💡 <strong>Quick tip:</strong> Odd powers skip the \\(\\pi/2\\) factor entirely — a common place to lose easy marks by tacking it on out of habit.",
+    "technique_ids": [
+      "05"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D05-4",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/2} \\sin^3 x\\cos^2 x\\,dx \\]",
+    "solution": "Since the power of \\(\\sin\\) is odd, substitute \\(u=\\cos x\\), \\(du=-\\sin x\\,dx\\): \\(\\sin^3x=\\sin x(1-\\cos^2x)=\\sin x(1-u^2)\\). The integral becomes \\(\\displaystyle\\int_0^1(1-u^2)u^2\\,du=\\left[\\frac{u^3}3-\\frac{u^5}5\\right]_0^1=\\frac13-\\frac15=\\frac2{15}\\).",
+    "answer": "2/15",
+    "tip": "💡 <strong>Quick tip:</strong> When one power is odd, peel off a single factor of that function and substitute for the other — faster than the general Beta formula for small exponents.",
+    "technique_ids": [
+      "05"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D05-5",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/2} \\sin^5 x\\,dx \\]",
+    "solution": "Wallis' formula for odd \\(n=5\\): \\(\\dfrac{4\\cdot2}{5\\cdot3\\cdot1}=\\dfrac8{15}\\).",
+    "answer": "8/15",
+    "tip": "💡 <strong>Quick tip:</strong> Write out the alternating chain of integers down to either \\(1\\) or \\(2\\) depending on parity — it's faster than substitution for a single power.",
+    "technique_ids": [
+      "05"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D06-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(I_n=\\displaystyle\\int_0^{\\pi/2}\\sin^n x\\,dx\\) satisfies the reduction \\(I_n=\\dfrac{n-1}nI_{n-2}\\), and \\(I_6=\\dfrac{5\\pi}{32}\\), find \\(I_8\\).",
+    "solution": "Apply the reduction with \\(n=8\\): \\(I_8=\\dfrac78I_6=\\dfrac78\\cdot\\dfrac{5\\pi}{32}=\\dfrac{35\\pi}{256}\\).",
+    "answer": "35π/256",
+    "tip": "💡 <strong>Quick tip:</strong> Once you're given (or have computed) one \\(I_n\\), the reduction formula gets you the next one in a single multiplication — no need to re-derive from scratch.",
+    "technique_ids": [
+      "06"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D06-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(I_n=\\displaystyle\\int_0^{\\pi/4}\\tan^n x\\,dx\\), find \\(I_5+I_7\\).",
+    "solution": "Using the standard relation \\(I_n+I_{n-2}=\\dfrac1{n-1}\\) with \\(n=7\\): \\(I_7+I_5=\\dfrac16\\).",
+    "answer": "1/6",
+    "tip": "💡 <strong>Quick tip:</strong> The relation \\(I_n+I_{n-2}=\\tfrac1{n-1}\\) applies for any consecutive-by-2 pair — just plug in the larger index.",
+    "technique_ids": [
+      "06"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D06-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(I_n=\\displaystyle\\int_0^1 x^n e^{-x}\\,dx\\) satisfies the reduction \\(I_n=nI_{n-1}-e^{-1}\\), and \\(I_0=1-e^{-1}\\), find \\(I_1\\).",
+    "solution": "Apply the reduction with \\(n=1\\): \\(I_1=1\\cdot I_0-e^{-1}=(1-e^{-1})-e^{-1}=1-2e^{-1}\\).",
+    "answer": "1 − 2/e",
+    "tip": "💡 <strong>Quick tip:</strong> Integration by parts on \\(x^ne^{-x}\\) always produces this style of reduction — one multiplication and one subtraction gets you to the next term.",
+    "technique_ids": [
+      "06"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D07-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(t)=\\displaystyle\\int_t^{2t}e^{tx}\\,dx\\), find \\(F'(0)\\) using Leibniz's rule.",
+    "solution": "\\(F'(t)=e^{t(2t)}\\cdot2-e^{t\\cdot t}\\cdot1+\\displaystyle\\int_t^{2t}xe^{tx}\\,dx\\). At \\(t=0\\): the first two terms give \\(e^0\\cdot2-e^0\\cdot1=1\\), and the integral's limits both equal \\(0\\), so it contributes nothing. \\(F'(0)=1\\).",
+    "answer": "1",
+    "tip": "💡 <strong>Quick tip:</strong> When evaluating at a specific point, check whether the residual integral's limits coincide there — if so, that term vanishes for free.",
+    "technique_ids": [
+      "07"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D07-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(t)=\\displaystyle\\int_0^t (x+t)\\,dx\\), find \\(F'(3)\\) using Leibniz's rule.",
+    "solution": "With \\(g(t)=0,\\ h(t)=t,\\ f(x,t)=x+t\\): \\(F'(t)=f(t,t)\\cdot1-f(0,t)\\cdot0+\\displaystyle\\int_0^t\\frac{\\partial f}{\\partial t}dx=(2t)+\\int_0^t1\\,dx=2t+t=3t\\). At \\(t=3\\): \\(F'(3)=9\\).",
+    "answer": "9",
+    "tip": "💡 <strong>Quick tip:</strong> Only the upper limit is variable here, so the lower-limit term of Leibniz's rule drops out — but don't forget the \\(\\partial f/\\partial t\\) integral, which still contributes.",
+    "technique_ids": [
+      "07"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D07-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(t)=\\displaystyle\\int_t^{t^2}\\frac{dx}x\\) for \\(t>0\\), find \\(F'(2)\\) using Leibniz's rule.",
+    "solution": "With \\(g(t)=t,g'(t)=1,\\ h(t)=t^2,h'(t)=2t\\), and \\(f(x,t)=1/x\\) (no explicit \\(t\\), so \\(\\partial f/\\partial t=0\\)): \\(F'(t)=\\dfrac1{t^2}\\cdot2t-\\dfrac1t\\cdot1=\\dfrac2t-\\dfrac1t=\\dfrac1t\\). At \\(t=2\\): \\(F'(2)=\\dfrac12\\).",
+    "answer": "1/2",
+    "tip": "💡 <strong>Quick tip:</strong> If the integrand doesn't explicitly contain the parameter, the \\(\\partial f/\\partial t\\) term of Leibniz's rule is automatically zero — only the limit terms survive.",
+    "technique_ids": [
+      "07"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D07-4",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(t)=\\displaystyle\\int_0^t\\sin(x-t)\\,dx\\), find \\(F'(\\pi/2)\\) using Leibniz's rule.",
+    "solution": "With \\(g=0,g'=0,\\ h=t,h'=1,\\ f(x,t)=\\sin(x-t),\\ \\partial f/\\partial t=-\\cos(x-t)\\): \\(F'(t)=\\sin(0)\\cdot1-0+\\displaystyle\\int_0^t-\\cos(x-t)\\,dx=0+\\left[-\\sin(x-t)\\right]_0^t=\\sin(-t)=-\\sin t\\). At \\(t=\\pi/2\\): \\(F'(\\pi/2)=-1\\).",
+    "answer": "−1",
+    "tip": "💡 <strong>Quick tip:</strong> Even when the boundary term vanishes (as it does here since \\(\\sin(t-t)=0\\)), you still need to evaluate the residual integral carefully.",
+    "technique_ids": [
+      "07"
+    ],
+    "difficulty": 4,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D07-5",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(t)=\\displaystyle\\int_0^t xt\\,dx\\), find \\(F'(2)\\) using Leibniz's rule.",
+    "solution": "With \\(g=0,g'=0,\\ h=t,h'=1,\\ f(x,t)=xt,\\ \\partial f/\\partial t=x\\): \\(F'(t)=(t\\cdot t)\\cdot1-0+\\displaystyle\\int_0^t x\\,dx=t^2+\\frac{t^2}2=\\frac{3t^2}2\\). At \\(t=2\\): \\(F'(2)=\\dfrac{3\\cdot4}2=6\\).",
+    "answer": "6",
+    "tip": "💡 <strong>Quick tip:</strong> Check your Leibniz-rule answer against direct differentiation when possible: here \\(F(t)=t^3/2\\) directly, and \\(F'(t)=3t^2/2\\) matches exactly.",
+    "technique_ids": [
+      "07"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D08-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Express \\(\\displaystyle\\int_0^2 x^3\\,dx\\) as the limit of a sum, and evaluate it.",
+    "solution": "With \\(h=2/n\\) and right-endpoint sampling: \\(\\displaystyle\\int_0^2x^3dx=\\lim_{n\\to\\infty}h\\sum_{r=1}^n(rh)^3=\\lim_{n\\to\\infty}h^4\\sum_{r=1}^n r^3\\). Using \\(\\sum r^3=\\left(\\frac{n(n+1)}2\\right)^2\\) and \\(h=2/n\\), this simplifies to \\(4\\), matching \\(\\left[\\frac{x^4}4\\right]_0^2=4\\).",
+    "answer": "4",
+    "tip": "💡 <strong>Quick tip:</strong> For \\(x^3\\), you'll need the closed form \\(\\sum r^3=\\left(\\frac{n(n+1)}2\\right)^2\\) — substitute it in before taking the \\(n\\to\\infty\\) limit, not after.",
+    "technique_ids": [
+      "08"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D08-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Express \\(\\displaystyle\\int_0^1 (3x^2+2x)\\,dx\\) as the limit of a sum, and evaluate it.",
+    "solution": "With \\(h=1/n\\): \\(\\displaystyle\\int_0^1(3x^2+2x)dx=\\lim_{n\\to\\infty}h\\sum_{r=1}^n\\left[3(rh)^2+2(rh)\\right]=\\lim_{n\\to\\infty}\\left[3h^3\\sum r^2+2h^2\\sum r\\right]\\). Using the closed forms for \\(\\sum r\\) and \\(\\sum r^2\\), this gives \\(3\\cdot\\dfrac13+2\\cdot\\dfrac12=1+1=2\\).",
+    "answer": "2",
+    "tip": "💡 <strong>Quick tip:</strong> Split the sum term by term first — handle the \\(x^2\\) piece and the \\(x\\) piece separately, each with its own closed-form sum.",
+    "technique_ids": [
+      "08"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D08-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Express \\(\\displaystyle\\int_0^3 x^2\\,dx\\) as the limit of a sum, and evaluate it.",
+    "solution": "With \\(h=3/n\\): \\(\\displaystyle\\int_0^3x^2dx=\\lim_{n\\to\\infty}h^3\\sum_{r=1}^n r^2\\). Substituting \\(\\sum r^2=\\frac{n(n+1)(2n+1)}6\\) and \\(h=3/n\\), the limit simplifies to \\(9\\), matching \\(\\left[\\frac{x^3}3\\right]_0^3=9\\).",
+    "answer": "9",
+    "tip": "💡 <strong>Quick tip:</strong> Always cross-check your Riemann-sum answer against the direct antiderivative evaluation — they should match exactly.",
+    "technique_ids": [
+      "08"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D09-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_{-2}^{2} |x-1|\\,dx \\]",
+    "solution": "Breakpoint at \\(x=1\\). Split: \\(\\displaystyle\\int_{-2}^1(1-x)dx+\\int_1^2(x-1)dx=\\left[x-\\frac{x^2}2\\right]_{-2}^1+\\left[\\frac{x^2}2-x\\right]_1^2=4.5+0.5=5\\).",
+    "answer": "5",
+    "tip": "💡 <strong>Quick tip:</strong> Solve \\(x-1=0\\) to find the split point, then integrate \\(1-x\\) before it and \\(x-1\\) after — never integrate \\(|x-1|\\) as written.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D09-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{2} |2x-3|\\,dx \\]",
+    "solution": "Breakpoint at \\(x=1.5\\). Split: \\(\\displaystyle\\int_0^{1.5}(3-2x)dx+\\int_{1.5}^2(2x-3)dx=2.25+0.25=2.5\\).",
+    "answer": "5/2",
+    "tip": "💡 <strong>Quick tip:</strong> The breakpoint doesn't have to be a nice integer — solve \\(2x-3=0\\) exactly and split there regardless.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D09-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^3 \\{x\\}^2\\,dx \\]",
+    "solution": "\\(\\{x\\}\\) resets to \\(x-k\\) on each interval \\([k,k+1)\\), so on each of the three unit intervals, \\(\\{x\\}^2\\) behaves exactly like \\(x^2\\) on \\([0,1)\\): \\(\\displaystyle\\int_0^1x^2dx=\\frac13\\). With three identical intervals, the total is \\(3\\times\\dfrac13=1\\).",
+    "answer": "1",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\{x\\}\\) repeats its exact shape on every unit interval — compute the integral over one period and multiply by the number of periods.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D09-4",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_{-1}^{1} |x|^3\\,dx \\]",
+    "solution": "Split at \\(x=0\\): \\(\\displaystyle\\int_{-1}^0(-x)^3dx+\\int_0^1x^3dx=\\int_{-1}^0-x^3dx+\\int_0^1x^3dx=\\frac14+\\frac14=\\frac12\\).",
+    "answer": "1/2",
+    "tip": "💡 <strong>Quick tip:</strong> \\(|x|^3\\) is even, so you could also double \\(\\int_0^1x^3dx\\) directly — splitting explicitly is the safer default when you're not sure about parity.",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D10-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^5 [x]\\,dx \\]",
+    "solution": "Direct from the shortcut: \\(\\dfrac{n(n-1)}2\\) with \\(n=5\\): \\(\\dfrac{5\\cdot4}2=10\\).",
+    "answer": "10",
+    "tip": "💡 <strong>Quick tip:</strong> No need to split into five strips — the formula \\(\\frac{n(n-1)}{2}\\) gives the answer in one step.",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D10-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^7 [x]\\,dx \\]",
+    "solution": "\\(\\dfrac{n(n-1)}2\\) with \\(n=7\\): \\(\\dfrac{7\\cdot6}2=21\\).",
+    "answer": "21",
+    "tip": "💡 <strong>Quick tip:</strong> This formula scales instantly to any integer upper limit — no extra work as \\(n\\) grows.",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D10-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^4 \\{x\\}\\,dx \\]",
+    "solution": "\\(\\int_0^n\\{x\\}dx=\\dfrac n2\\) with \\(n=4\\): \\(\\dfrac42=2\\).",
+    "answer": "2",
+    "tip": "💡 <strong>Quick tip:</strong> The fractional part always averages to \\(\\tfrac12\\) on each unit interval — multiply by the number of intervals.",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D10-4",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{10} \\{x\\}\\,dx \\]",
+    "solution": "\\(\\int_0^n\\{x\\}dx=\\dfrac n2\\) with \\(n=10\\): \\(\\dfrac{10}2=5\\).",
+    "answer": "5",
+    "tip": "💡 <strong>Quick tip:</strong> Same shortcut regardless of how large \\(n\\) is — the formula doesn't care.",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D10-5",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_2^6 [x]\\,dx \\]",
+    "solution": "Use additivity to combine two applications of the shortcut: \\(\\displaystyle\\int_2^6[x]dx=\\int_0^6[x]dx-\\int_0^2[x]dx=\\frac{6\\cdot5}2-\\frac{2\\cdot1}2=15-1=14\\).",
+    "answer": "14",
+    "tip": "💡 <strong>Quick tip:</strong> The \\(\\int_0^n[x]dx\\) shortcut only starts at \\(0\\) — for a shifted interval, subtract two applications of it instead of re-deriving from scratch.",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D11-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_1^4 \\frac{\\sqrt{x-1}}{\\sqrt{x-1}+\\sqrt{4-x}}\\,dx \\]",
+    "solution": "Here \\(a=1,\\,b=4\\), so \\(a+b-x=5-x\\), and \\(f(x)=\\sqrt{x-1}\\) gives \\(f(a+b-x)=\\sqrt{(5-x)-1}=\\sqrt{4-x}\\) — exactly the denominator's second term. So \\(I=\\dfrac{b-a}2=\\dfrac{4-1}2=\\dfrac32\\).",
+    "answer": "3/2",
+    "tip": "💡 <strong>Quick tip:</strong> Check that the second term in the denominator really is \\(f(a+b-x)\\) for the same \\(f\\) in the numerator — that's what licenses the shortcut.",
+    "technique_ids": [
+      "11"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D11-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{10} \\frac{\\sin x}{\\sin x+\\sin(10-x)}\\,dx \\]",
+    "solution": "With \\(a=0,\\,b=10\\), the denominator is exactly \\(f(x)+f(a+b-x)\\) for \\(f(x)=\\sin x\\). So \\(I=\\dfrac{b-a}2=\\dfrac{10}2=5\\), regardless of the fact that \\(f\\) is trigonometric rather than algebraic.",
+    "answer": "5",
+    "tip": "💡 <strong>Quick tip:</strong> This shortcut doesn't care what \\(f\\) actually is — algebraic, trigonometric, anything — only that the denominator has the right shape.",
+    "technique_ids": [
+      "11"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D12-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\infty} x^4 e^{-x}\\,dx \\]",
+    "solution": "Direct from the Gamma shortcut: \\(n!\\) with \\(n=4\\): \\(4!=24\\).",
+    "answer": "24",
+    "tip": "💡 <strong>Quick tip:</strong> No integration by parts needed — just read off \\(n!\\) for \\(\\int_0^\\infty x^ne^{-x}dx\\).",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D12-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\infty} x^2 e^{-x}\\,dx \\]",
+    "solution": "Direct from the Gamma shortcut: \\(2!=2\\).",
+    "answer": "2",
+    "tip": "💡 <strong>Quick tip:</strong> Small values of \\(n\\) are worth memorizing outright: \\(0!=1,\\ 1!=1,\\ 2!=2,\\ 3!=6,\\ 4!=24\\).",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D12-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\infty} x^5 e^{-2x}\\,dx \\]",
+    "solution": "For \\(\\int_0^\\infty x^ne^{-ax}dx=\\dfrac{n!}{a^{n+1}}\\) with \\(n=5,\\,a=2\\): \\(\\dfrac{5!}{2^6}=\\dfrac{120}{64}=\\dfrac{15}8\\).",
+    "answer": "15/8",
+    "tip": "💡 <strong>Quick tip:</strong> When the exponent has a coefficient other than \\(-1\\), use the generalized formula \\(n!/a^{n+1}\\) rather than substituting first.",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D12-4",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\infty} x^3 e^{-x/3}\\,dx \\]",
+    "solution": "Here \\(a=1/3\\): \\(\\dfrac{3!}{(1/3)^4}=6\\times81=486\\).",
+    "answer": "486",
+    "tip": "💡 <strong>Quick tip:</strong> A fractional coefficient in the exponent just means \\(a<1\\), which makes \\(1/a^{n+1}\\) larger — the formula still applies exactly the same way.",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D12-5",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\infty} x^7 e^{-x}\\,dx \\]",
+    "solution": "Direct from the Gamma shortcut: \\(7!=5040\\).",
+    "answer": "5040",
+    "tip": "💡 <strong>Quick tip:</strong> Even for large \\(n\\), this is a one-line factorial lookup — never attempt integration by parts seven times.",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D13-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^1 x^3(1-x)^2\\,dx \\]",
+    "solution": "Direct from the Beta shortcut: \\(\\dfrac{3!\\,2!}{6!}=\\dfrac{6\\times2}{720}=\\dfrac1{60}\\).",
+    "answer": "1/60",
+    "tip": "💡 <strong>Quick tip:</strong> Note the denominator is \\((m+n+1)!\\), not \\((m+n)!\\) — a common off-by-one mistake.",
+    "technique_ids": [
+      "13"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D13-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/2} \\sin^3 x\\cos^5 x\\,dx \\]",
+    "solution": "Direct from the Beta shortcut with \\(m=3,\\,n=5\\): \\(\\dfrac12B(2,3)=\\dfrac12\\cdot\\dfrac{1!\\,2!}{4!}=\\dfrac12\\cdot\\dfrac2{24}=\\dfrac1{24}\\).",
+    "answer": "1/24",
+    "tip": "💡 <strong>Quick tip:</strong> The half-integer arguments \\(\\tfrac{m+1}2,\\tfrac{n+1}2\\) become whole numbers exactly when \\(m,n\\) are both odd — that's when this shortcut is fastest.",
+    "technique_ids": [
+      "13"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D13-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^1 x^4(1-x)^4\\,dx \\]",
+    "solution": "Direct from the Beta shortcut: \\(\\dfrac{4!\\,4!}{9!}=\\dfrac{24\\times24}{362880}=\\dfrac1{630}\\).",
+    "answer": "1/630",
+    "tip": "💡 <strong>Quick tip:</strong> Symmetric exponents like \\(m=n=4\\) still use the same formula — don't look for a shortcut-to-the-shortcut.",
+    "technique_ids": [
+      "13"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D14-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the average value of \\(f(x)=\\sin x\\) on \\([0,\\pi]\\).",
+    "solution": "Average value \\(=\\dfrac1{\\pi-0}\\displaystyle\\int_0^\\pi\\sin x\\,dx=\\dfrac1\\pi\\times2=\\dfrac2\\pi\\).",
+    "answer": "2/π",
+    "tip": "💡 <strong>Quick tip:</strong> Compute the plain definite integral first, then divide by the interval length — don't try to combine the two steps.",
+    "technique_ids": [
+      "14"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D14-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the average value of \\(f(x)=x^3\\) on \\([1,3]\\).",
+    "solution": "Average value \\(=\\dfrac1{3-1}\\displaystyle\\int_1^3x^3dx=\\dfrac12\\left[\\frac{x^4}4\\right]_1^3=\\dfrac12\\cdot\\frac{81-1}4=\\dfrac12\\times20=10\\).",
+    "answer": "10",
+    "tip": "💡 <strong>Quick tip:</strong> Watch the arithmetic on \\(81-1=80\\), not \\(81-1=79\\) — a common slip when the interval doesn't start at \\(0\\).",
+    "technique_ids": [
+      "14"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D14-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Given that \\(2\\le3+\\sin x\\le4\\) on \\([0,\\pi]\\), find bounds for \\(\\displaystyle\\int_0^\\pi(3+\\sin x)\\,dx\\) without evaluating it exactly.",
+    "solution": "Using \\(m(b-a)\\le\\int_a^b f\\,dx\\le M(b-a)\\) with \\(m=2,\\,M=4,\\,b-a=\\pi\\): \\(2\\pi\\le I\\le4\\pi\\). (The exact value, \\(3\\pi+2\\approx11.42\\), does sit inside this range, between \\(2\\pi\\approx6.28\\) and \\(4\\pi\\approx12.57\\).)",
+    "answer": "2π ≤ I ≤ 4π",
+    "tip": "💡 <strong>Quick tip:</strong> This technique estimates without evaluating — useful for sanity-checking an exact answer, or when an exact antiderivative isn't available.",
+    "technique_ids": [
+      "14"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D14-4",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "Find the average value of \\(f(x)=e^x\\) on \\([0,2]\\).",
+    "solution": "Average value \\(=\\dfrac1{2-0}\\displaystyle\\int_0^2e^x\\,dx=\\dfrac12\\left(e^2-1\\right)\\).",
+    "answer": "(e² − 1)/2",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\int e^xdx=e^x\\) is one of the fastest antiderivatives available — the only real step here is dividing by the interval length.",
+    "technique_ids": [
+      "14"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D15-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(x)=\\displaystyle\\int_0^{x^3}\\cos t\\,dt\\), find \\(F'(1)\\).",
+    "solution": "\\(F'(x)=\\cos(x^3)\\cdot3x^2\\). At \\(x=1\\): \\(F'(1)=\\cos(1)\\times3=3\\cos1\\).",
+    "answer": "3cos(1)",
+    "tip": "💡 <strong>Quick tip:</strong> Plug the upper limit into \\(f\\), then multiply by the derivative of that upper limit — here that's \\(3x^2\\) from \\(x^3\\).",
+    "technique_ids": [
+      "15"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D15-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(x)=\\displaystyle\\int_x^{5}\\frac{dt}{1+t^2}\\), find \\(F'(2)\\).",
+    "solution": "Only the lower limit varies here, which contributes a negative sign: \\(F'(x)=-\\dfrac1{1+x^2}\\). At \\(x=2\\): \\(F'(2)=-\\dfrac15\\).",
+    "answer": "−1/5",
+    "tip": "💡 <strong>Quick tip:</strong> When only the lower limit is variable (upper limit constant), the derivative is just \\(-f(\\text{lower limit})\\times(\\text{lower limit})'\\) — don't forget the minus sign.",
+    "technique_ids": [
+      "15"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D15-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(x)=\\displaystyle\\int_{\\sin x}^{\\cos x}e^t\\,dt\\), find \\(F'(0)\\).",
+    "solution": "\\(F'(x)=e^{\\cos x}\\cdot(-\\sin x)-e^{\\sin x}\\cdot\\cos x\\). At \\(x=0\\): \\(e^1\\cdot0-e^0\\cdot1=0-1=-1\\).",
+    "answer": "−1",
+    "tip": "💡 <strong>Quick tip:</strong> Both limits are moving here — differentiate the upper-limit term and the lower-limit term separately, then subtract as usual.",
+    "technique_ids": [
+      "15"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D15-4",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "If \\(F(x)=\\displaystyle\\int_2^{x^2}\\ln t\\,dt\\) for \\(x>0\\), find \\(F'(3)\\).",
+    "solution": "\\(F'(x)=\\ln(x^2)\\cdot2x\\). At \\(x=3\\): \\(\\ln9\\times6=6\\ln9=12\\ln3\\) (using \\(\\ln9=2\\ln3\\)).",
+    "answer": "12ln(3)",
+    "tip": "💡 <strong>Quick tip:</strong> Simplify \\(\\ln(x^2)=2\\ln x\\) before substituting — it often makes the final numeric form cleaner.",
+    "technique_ids": [
+      "15"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D17-1",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi} \\sin^2 x\\,dx \\]",
+    "solution": "Using \\(\\sin^2x=\\dfrac{1-\\cos2x}2\\): antiderivative is \\(\\dfrac x2-\\dfrac{\\sin2x}4\\). Evaluating: \\(\\left(\\dfrac\\pi2-0\\right)-(0-0)=\\dfrac\\pi2\\).",
+    "answer": "π/2",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\sin^2x\\) and \\(\\cos^2x\\) should always be rewritten via the double-angle identity before integrating — never integrated directly as squared terms.",
+    "technique_ids": [
+      "17"
+    ],
+    "difficulty": 1,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D17-2",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/4} \\cos^2 x\\,dx \\]",
+    "solution": "Using \\(\\cos^2x=\\dfrac{1+\\cos2x}2\\): antiderivative is \\(\\dfrac x2+\\dfrac{\\sin2x}4\\). Evaluating at \\(\\pi/4\\): \\(\\dfrac\\pi8+\\dfrac14\\).",
+    "answer": "π/8 + 1/4",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\sin(2\\cdot\\pi/4)=\\sin(\\pi/2)=1\\) — a common evaluation point worth recognizing on sight.",
+    "technique_ids": [
+      "17"
+    ],
+    "difficulty": 2,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  },
+  {
+    "exam_id": "practice",
+    "exam_name": "Practice Drill",
+    "qid": "PR-D17-3",
+    "source": "Practice question — for drill practice, not a past exam question",
+    "question": "\\[ \\int_0^{\\pi/2} \\sin 3x\\cos x\\,dx \\]",
+    "solution": "Product-to-sum: \\(\\sin3x\\cos x=\\dfrac12\\left[\\sin4x+\\sin2x\\right]\\). Antiderivative: \\(-\\dfrac{\\cos4x}8-\\dfrac{\\cos2x}4\\). Evaluating from \\(0\\) to \\(\\pi/2\\): \\(\\left(-\\dfrac{\\cos2\\pi}8-\\dfrac{\\cos\\pi}4\\right)-\\left(-\\dfrac18-\\dfrac14\\right)=\\left(-\\dfrac18+\\dfrac14\\right)-\\left(-\\dfrac38\\right)=\\dfrac18+\\dfrac38=\\dfrac12\\).",
+    "answer": "1/2",
+    "tip": "💡 <strong>Quick tip:</strong> \\(\\sin A\\cos B=\\tfrac12[\\sin(A+B)+\\sin(A-B)]\\) turns any product of sines and cosines into a sum of simple sines — always faster than by-parts for this shape.",
+    "technique_ids": [
+      "17"
+    ],
+    "difficulty": 3,
+    "topic": "definite-integrals",
+    "subject": "math",
+    "solved_default": false
+  }
+]

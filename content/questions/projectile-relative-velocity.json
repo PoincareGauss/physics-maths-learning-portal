@@ -1,0 +1,70 @@
+[
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "P1 (style)",
+    "source": "Style-matched — illustrative, not a verified past paper",
+    "question": "Two swimmers start from the same point on a riverbank. The river flows at \\(3\\ \\text{m/s}\\). Swimmer A swims perpendicular to the bank at \\(4\\ \\text{m/s}\\) relative to water; Swimmer B aims to reach the point directly opposite A's starting point. If the river is \\(120\\ \\text{m}\\) wide, find the ratio of times taken by A and B to cross.",
+    "solution": "A drifts downstream while crossing: crossing time \\(t_A=\\dfrac{120}{4}=30\\,\\text{s}\\) (drift doesn't affect crossing time). B must angle upstream so the resultant is straight across: needs \\(v_B\\sin\\theta=3\\), so B's effective crossing speed is \\(\\sqrt{v_B^2-9}\\); with \\(v_B=4\\), that is \\(\\sqrt7\\), giving \\(t_B=\\dfrac{120}{\\sqrt7}\\approx45.4\\,\\text{s}\\).\\[\\dfrac{t_A}{t_B}=\\dfrac{\\sqrt7}{4}\\approx0.66\\]",
+    "answer": "t_A : t_B = √7 : 4",
+    "tip": "💡 <strong>Quick tip:</strong> “Crossing time” only ever depends on the perpendicular velocity component — the current changes where you land, never how long it takes, unless you're forced to cancel the drift.",
+    "technique_ids": [
+      "P1"
+    ],
+    "difficulty": 3,
+    "topic": "projectile-relative-velocity",
+    "subject": "physics",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "P2 (style)",
+    "source": "Style-matched — illustrative, not a verified past paper",
+    "question": "A ball is projected at \\(20\\ \\text{m/s}\\) at \\(30^\\circ\\) above the horizontal from a cliff of height \\(45\\ \\text{m}\\). Take \\(g=10\\ \\text{m/s}^2\\). Find the time to hit the ground.",
+    "solution": "Vertical: \\(u_y=20\\sin30^\\circ=10\\,\\text{m/s}\\). \\(-45=10t-5t^2 \\Rightarrow 5t^2-10t-45=0 \\Rightarrow t^2-2t-9=0\\).\\[t=\\dfrac{2+\\sqrt{4+36}}{2}=1+\\sqrt{10}\\approx4.16\\,\\text{s}\\]",
+    "answer": "t = 1 + √10 ≈ 4.16 s",
+    "tip": "💡 <strong>Quick tip:</strong> Solve the vertical equation alone first — horizontal velocity is irrelevant to “when does it land.” Only bring it in afterward for range.",
+    "technique_ids": [
+      "P3"
+    ],
+    "difficulty": 2,
+    "topic": "projectile-relative-velocity",
+    "subject": "physics",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "P1 (style)",
+    "source": "Style-matched — illustrative, not a verified past paper",
+    "question": "A block on a frictionless incline of angle \\(\\theta\\) is connected over a pulley at the top to a hanging mass. Using the fact that the string is inextensible, relate the block's acceleration along the incline to the hanging mass's vertical acceleration.",
+    "solution": "Let \\(x\\) be the block's distance from the pulley along the incline and \\(y\\) the hanging mass's distance below the pulley. String length \\(x+y=\\text{const}\\Rightarrow \\dot x+\\dot y=0\\Rightarrow \\ddot x=-\\ddot y\\).\\[|a_{\\text{block along incline}}|=|a_{\\text{hanging mass}}|\\]",
+    "answer": "Equal in magnitude: a_block = a_hanging",
+    "tip": "💡 <strong>Quick tip:</strong> Write the string-length constraint as an equation first, then differentiate twice — never assume equal accelerations “by symmetry” for an unfamiliar pulley layout.",
+    "technique_ids": [
+      "P6"
+    ],
+    "difficulty": 3,
+    "topic": "projectile-relative-velocity",
+    "subject": "physics",
+    "solved_default": false
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "P2 (style)",
+    "source": "Style-matched — illustrative, not a verified past paper",
+    "question": "A particle is projected with speed \\(u\\) at angle \\(\\theta\\) on level ground. Show that the horizontal range formula \\(R=\\dfrac{u^2\\sin2\\theta}{g}\\) gives the same range for \\(\\theta\\) and \\(90^\\circ-\\theta\\), and check the \\(\\theta\\to0\\) limit makes physical sense.",
+    "solution": "\\(\\sin(2(90^\\circ-\\theta))=\\sin(180^\\circ-2\\theta)=\\sin2\\theta\\), so the range is identical — confirms complementary angles share a range. As \\(\\theta\\to0\\), \\(\\sin2\\theta\\to0\\Rightarrow R\\to0\\): a horizontal launch along the ground travels zero range before “landing,” which matches intuition.",
+    "answer": "Range symmetric about 45°; R → 0 as θ → 0, as expected",
+    "tip": "💡 <strong>Quick tip:</strong> Whenever a formula has a free parameter, test \\(\\theta\\to0\\) or \\(\\theta\\to90^\\circ\\) — a wrong derivation almost always breaks at one of the extremes.",
+    "technique_ids": [
+      "P5"
+    ],
+    "difficulty": 2,
+    "topic": "projectile-relative-velocity",
+    "subject": "physics",
+    "solved_default": false
+  }
+]

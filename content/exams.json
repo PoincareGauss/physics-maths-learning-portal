@@ -1,0 +1,42 @@
+[
+  {
+    "id": "jee-main",
+    "label": "JEE Main",
+    "questionCount": 29
+  },
+  {
+    "id": "jee-adv",
+    "label": "JEE Advanced",
+    "questionCount": 28
+  },
+  {
+    "id": "bitsat",
+    "label": "BITSAT",
+    "questionCount": 13
+  },
+  {
+    "id": "kcet",
+    "label": "KCET",
+    "questionCount": 14
+  },
+  {
+    "id": "apcalc",
+    "label": "AP Calculus AB",
+    "questionCount": 7
+  },
+  {
+    "id": "igcse",
+    "label": "Cambridge IGCSE",
+    "questionCount": 12
+  },
+  {
+    "id": "riemann",
+    "label": "Riemann Sums",
+    "questionCount": 3
+  },
+  {
+    "id": "practice",
+    "label": "Practice Drill",
+    "questionCount": 110
+  }
+]

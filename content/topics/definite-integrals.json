@@ -1,0 +1,159 @@
+{
+  "id": "definite-integrals",
+  "subject": "math",
+  "label": "Definite Integrals",
+  "live": true,
+  "blurb": "The area, cleanly split — real past-year questions from JEE Main, JEE Advanced, BITSAT, KCET, AP Calculus AB and Cambridge IGCSE, from King's-rule symmetry to reduction formulas and Wallis' theorem, graded by difficulty and tagged by technique.",
+  "exam_order": [
+    "jee-main",
+    "jee-adv",
+    "bitsat",
+    "kcet",
+    "apcalc",
+    "igcse",
+    "riemann",
+    "practice"
+  ],
+  "toolkit": [
+    {
+      "id": "01",
+      "title": "King's Rule (0 → a)",
+      "desc": "If you're integrating from \\(0\\) to \\(a\\), you can replace every \\(x\\) in \\(f(x)\\) with \\((a-x)\\) and the integral stays exactly the same: \\(\\int_0^a f(x)dx=\\int_0^a f(a-x)dx\\). Try adding the original integral to this new version — the two often combine into something much simpler."
+    },
+    {
+      "id": "02",
+      "title": "King's Rule, general shift [a,b]",
+      "desc": "The same idea works on any interval \\([a,b]\\): replace \\(x\\) with \\((a+b-x)\\) and the integral doesn't change. This helps when adding \\(f(x)\\) and \\(f(a+b-x)\\) together gives you something simple, like a constant, or swaps \\(\\sin\\) for \\(\\cos\\)."
+    },
+    {
+      "id": "03",
+      "title": "Even / odd on a symmetric interval",
+      "desc": "If you're integrating from \\(-a\\) to \\(a\\): an even function doubles (just integrate from \\(0\\) to \\(a\\) and multiply by \\(2\\)), and an odd function vanishes completely — the answer is \\(0\\). Also watch for \\(f(x)+f(-x)\\) adding up to a constant, which is a similar shortcut."
+    },
+    {
+      "id": "04",
+      "title": "Exploit periodicity",
+      "desc": "If \\(f\\) repeats every \\(T\\) units, integrating over \\(n\\) full periods just gives \\(n\\) times the value over one period. And the integral over any single period is the same no matter where it starts. Watch for things like \\(|\\sin x|\\) or \\(\\{x\\}\\) that repeat even if they don't look periodic at first glance."
+    },
+    {
+      "id": "05",
+      "title": "Wallis' formula",
+      "desc": "There's a ready-made formula for \\(\\int_0^{\\pi/2}\\sin^n x\\,dx\\) (which equals \\(\\int_0^{\\pi/2}\\cos^n x\\,dx\\) too): multiply a chain of alternating numbers counting down from \\(n\\), and if \\(n\\) is even, multiply the whole thing by \\(\\dfrac\\pi2\\) at the end. This gives the answer instantly — no integration by parts needed."
+    },
+    {
+      "id": "06",
+      "title": "Reduction formulas — combine, don't solve",
+      "desc": "If a problem defines a family of integrals \\(I_n\\), try integrating by parts once to find a rule connecting \\(I_n\\) to \\(I_{n-2}\\). If the question only asks for something like \\(I_n+I_{n-2}\\), you often don't need to solve for either one — the rule hands you the sum directly."
+    },
+    {
+      "id": "07",
+      "title": "Leibniz's rule (parametric integrals)",
+      "desc": "If both the limits and the inside of an integral depend on the same variable, there's a rule for differentiating the whole thing at once: one piece for what happens at the top limit, one for the bottom limit, and one for how the integrand itself changes. This can turn a nasty integral into an equation you can actually solve."
+    },
+    {
+      "id": "08",
+      "title": "Definite integral as the limit of a sum",
+      "desc": "A sum like \\(\\frac1n\\sum_{r=1}^n f(r/n)\\), as \\(n\\to\\infty\\), is just \\(\\int_0^1 f(x)\\,dx\\) built up from infinitely many, infinitely thin strips. Spot this pattern and you can replace the whole sum with an integral instead of adding it up term by term."
+    },
+    {
+      "id": "09",
+      "title": "Split at non-smooth points",
+      "desc": "Functions like \\(|x|\\), \\([x]\\) (round down to the nearest integer), or \\(\\{x\\}\\) (just the part after the decimal point) behave differently on different pieces of the interval. Find every point where the behavior changes, split the integral there, and deal with each piece on its own."
+    },
+    {
+      "id": "10",
+      "title": "Greatest-integer / fractional-part shortcuts",
+      "desc": "Two formulas worth memorizing: \\(\\int_0^n [x]\\,dx=\\dfrac{n(n-1)}2\\) for a whole number \\(n\\), and the fractional part \\(\\{x\\}\\) always averages out to \\(\\tfrac12\\) over each unit interval, so \\(\\int_0^n\\{x\\}dx=\\dfrac n2\\)."
+    },
+    {
+      "id": "11",
+      "title": "The f/(f + f∘shift) trick",
+      "desc": "If you see a fraction where the denominator is \\(f(x)\\) plus its King's-rule partner \\(f(a+b-x)\\), the whole integral equals \\(\\dfrac{b-a}2\\) — no matter what \\(f\\) actually is. You don't need to work out either piece."
+    },
+    {
+      "id": "12",
+      "title": "Gamma-function shortcut",
+      "desc": "\\(\\int_0^\\infty x^n e^{-x}dx\\) always equals \\(n!\\) for a whole number \\(n\\). If you see a power of \\(x\\) multiplied by \\(e\\) to a negative power, try a substitution that turns the exponent into a clean \\(-u\\) — you might be looking at this formula in disguise."
+    },
+    {
+      "id": "13",
+      "title": "Beta-function shortcut",
+      "desc": "For \\(\\int_0^1 x^m(1-x)^n dx\\), skip the algebra and use \\(\\dfrac{m!\\,n!}{(m+n+1)!}\\) directly. A similar formula exists for \\(\\int_0^{\\pi/2}\\sin^m x\\cos^n x\\,dx\\). Both save a lot of time compared to expanding everything by hand."
+    },
+    {
+      "id": "14",
+      "title": "Bound it / average-value shortcut",
+      "desc": "If \\(f(x)\\) never dips below \\(m\\) or rises above \\(M\\) on \\([a,b]\\), the integral is trapped between \\(m(b-a)\\) and \\(M(b-a)\\) — handy for estimating without solving exactly. The average value of \\(f\\) on \\([a,b]\\) is simply the integral divided by \\((b-a)\\)."
+    },
+    {
+      "id": "15",
+      "title": "Differentiate a variable-limit integral",
+      "desc": "If \\(F(x)\\) is an integral whose top and bottom limits are both functions of \\(x\\), you don't need an antiderivative to differentiate it. Just plug the top limit into \\(f\\) and multiply by its derivative, then subtract the same thing using the bottom limit."
+    },
+    {
+      "id": "16",
+      "title": "Recognize the antiderivative and just evaluate",
+      "desc": "Before trying anything clever, check whether the integrand is a form you already know by heart — \\(x^n\\), \\(1/x\\), \\(1/(1+x^2)\\), and so on. If it is, just write down the antiderivative and plug in the limits. Most exam integrals really are this simple."
+    },
+    {
+      "id": "17",
+      "title": "Power-reduce trig integrands first",
+      "desc": "For things like \\(\\sin^n x\\), \\(\\cos^n x\\), or \\(\\sin mx\\cos nx\\), rewrite them using double-angle or product-to-sum identities before integrating. Turning them into a sum of plain sines and cosines is usually much faster than integrating by parts."
+    },
+    {
+      "id": "18",
+      "title": "Match the integrand to its standard substitution",
+      "desc": "Match what's inside the integral to the substitution it's hinting at: \\(\\sqrt{a^2-x^2}\\) wants \\(x=a\\sin\\theta\\); a mix of \\(\\sin x\\) and \\(\\cos x\\) as fractions wants \\(t=\\tan(x/2)\\); \\(\\sin^2x\\) and \\(\\cos^2x\\) appearing together usually wants \\(u=\\tan x\\). Spotting the shape saves you from guessing."
+    }
+  ],
+  "formulas": [
+    {
+      "cat": "A · Core properties",
+      "items": [
+        "\\(\\displaystyle\\int_a^b f(x)dx=-\\int_b^a f(x)dx\\)",
+        "\\(\\displaystyle\\int_a^b f(x)dx=\\int_a^c f(x)dx+\\int_c^b f(x)dx\\)",
+        "\\(\\displaystyle\\int_a^b f(x)dx=\\int_a^b f(a+b-x)dx\\)",
+        "\\(\\displaystyle\\int_0^a f(x)dx=\\int_0^a f(a-x)dx\\)",
+        "\\(\\displaystyle\\int_{-a}^a f(x)dx=2\\int_0^a f(x)dx\\) if \\(f\\) even, \\(0\\) if \\(f\\) odd",
+        "\\(\\displaystyle\\int_0^{2a} f(x)dx=2\\int_0^a f(x)dx\\) if \\(f(2a-x)=f(x)\\), else \\(0\\) if \\(f(2a-x)=-f(x)\\)"
+      ]
+    },
+    {
+      "cat": "B · Periodic, floor & fractional part",
+      "items": [
+        "\\(\\displaystyle\\int_0^{nT} f(x)dx=n\\int_0^T f(x)dx\\) for \\(T\\)-periodic \\(f\\)",
+        "\\(\\displaystyle\\int_a^{a+T} f(x)dx\\) is the same for every \\(a\\), for \\(T\\)-periodic \\(f\\)",
+        "\\(\\displaystyle\\int_0^n [x]\\,dx=\\dfrac{n(n-1)}2\\) (integer \\(n\\))",
+        "\\(\\displaystyle\\int_0^1\\{x\\}dx=\\dfrac12,\\quad \\int_0^n\\{x\\}dx=\\dfrac n2\\)"
+      ]
+    },
+    {
+      "cat": "C · Wallis & Beta–Gamma",
+      "items": [
+        "\\(\\displaystyle\\int_0^{\\pi/2}\\sin^n x\\,dx=\\int_0^{\\pi/2}\\cos^n x\\,dx\\)",
+        "\\(n\\) even: \\(=\\dfrac{(n-1)(n-3)\\cdots1}{n(n-2)\\cdots2}\\cdot\\dfrac{\\pi}{2}\\); \\(n\\) odd: \\(=\\dfrac{(n-1)(n-3)\\cdots2}{n(n-2)\\cdots3}\\)",
+        "\\(\\displaystyle\\int_0^1 x^m(1-x)^n dx=\\dfrac{m!\\,n!}{(m+n+1)!}\\)",
+        "\\(\\displaystyle\\int_0^\\infty x^n e^{-x}dx=n!\\)"
+      ]
+    },
+    {
+      "cat": "D · Standard antiderivative forms",
+      "items": [
+        "\\(\\displaystyle\\int \\dfrac{dx}{a^2+x^2}=\\dfrac1a\\tan^{-1}\\dfrac xa+C\\)",
+        "\\(\\displaystyle\\int\\dfrac{dx}{\\sqrt{a^2-x^2}}=\\sin^{-1}\\dfrac xa+C\\)",
+        "\\(\\displaystyle\\int\\dfrac{dx}{x}=\\ln|x|+C\\)",
+        "\\(\\displaystyle\\int e^{x}dx=e^x+C\\)",
+        "\\(\\displaystyle\\int \\tan x\\,dx=\\ln|\\sec x|+C\\)"
+      ]
+    },
+    {
+      "cat": "E · Calculus tools",
+      "items": [
+        "\\(\\dfrac{d}{dx}\\displaystyle\\int_a^x f(t)dt=f(x)\\) (Fundamental Theorem of Calculus)",
+        "\\(\\dfrac{d}{dx}\\displaystyle\\int_{g(x)}^{h(x)} f(t)dt=f(h(x))h'(x)-f(g(x))g'(x)\\)",
+        "\\(\\displaystyle\\lim_{n\\to\\infty}\\frac1n\\sum_{r=1}^n f(r/n)=\\int_0^1 f(x)dx\\)",
+        "Mean value theorem for integrals: \\(\\exists\\,c\\in[a,b]\\) with \\(\\int_a^b f(x)dx=f(c)(b-a)\\)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "projectile-relative-velocity",
+  "subject": "physics",
+  "label": "Projectile Motion & Relative Velocity",
+  "live": true,
+  "blurb": "A preview topic showing how the same trick-first format carries over to Physics — four sample problems, not yet a full verified bank.",
+  "exam_order": [
+    "jee-main",
+    "jee-adv"
+  ],
+  "toolkit": [
+    {
+      "id": "P1",
+      "title": "Switch to the relative frame first",
+      "desc": "For “when/where do A and B meet” problems, work in the frame of one object: \\(\\vec v_{AB}=\\vec v_A-\\vec v_B\\). The problem usually collapses to 1-D in that frame."
+    },
+    {
+      "id": "P2",
+      "title": "Resolve along the constraint, not default x–y",
+      "desc": "Pick axes along the incline, the string, or the wall — whichever direction has zero acceleration or zero velocity component — before writing any equation."
+    },
+    {
+      "id": "P3",
+      "title": "Range/height/time are independent sub-problems",
+      "desc": "In projectile motion, vertical motion fixes time of flight; horizontal motion (constant velocity) then fixes range. Solve the vertical equation first, always."
+    },
+    {
+      "id": "P4",
+      "title": "Symmetry before computation",
+      "desc": "Before setting up an integral or force balance, ask what symmetry (mirror, rotational) the configuration has — it often kills half the terms for free."
+    },
+    {
+      "id": "P5",
+      "title": "Sanity-check with limiting cases",
+      "desc": "Plug in an extreme or special value (angle \\(\\to0\\) or \\(90^\\circ\\), mass ratio \\(\\to0\\) or \\(\\infty\\)) and check the formula matches the physically obvious answer."
+    },
+    {
+      "id": "P6",
+      "title": "Constraint relations by differentiating geometry",
+      "desc": "When two motions are linked by a string/rod/incline, write the geometric length relation first, then differentiate it — don't guess the velocity relation directly."
+    }
+  ],
+  "formulas": []
+}
