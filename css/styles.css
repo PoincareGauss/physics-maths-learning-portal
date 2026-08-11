@@ -19,3 +19,18 @@
 .empty-action{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
 .test-overlay{position:fixed;inset:0;background:rgba(35,31,26,.94);z-index:300;display:flex;align-items:center;justify-content:center;padding:1rem}.test-card{background:var(--paper);width:min(900px,100%);max-height:94vh;overflow:auto;border-radius:16px;padding:1.5rem}.test-top{display:flex;justify-content:space-between;align-items:center;gap:1rem}.test-timer{font:700 1.1rem 'JetBrains Mono',monospace;color:var(--jee-adv)}.test-q{margin-top:1.2rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.2rem}.test-options{display:grid;gap:.55rem;margin-top:1rem}.test-option{border:1px solid var(--line);background:#fff;border-radius:9px;padding:.75rem;text-align:left;cursor:pointer}.test-option.selected{border-color:var(--jee-main);background:var(--jee-main-soft)}.test-nav{display:flex;justify-content:space-between;gap:.7rem;margin-top:1rem}.test-result{display:grid;place-items:center;text-align:center;padding:2rem}.test-result strong{font:700 4rem 'Fraunces',serif}.test-result .result-badges{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin:1rem 0}.result-badge{padding:.35rem .65rem;border-radius:999px;background:var(--paper-deep);font:600 .7rem 'JetBrains Mono',monospace}
 @media(max-width:720px){.test-card{padding:1rem}.notebook-item .nb-head{flex-direction:column}.top-actions .global-search{max-width:180px}}
+
+
+/* Student dashboard v4 */
+.dashboard-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:18px;margin:26px 0}
+.continue-card,.daily-card{border:1px solid var(--line,#ddd);border-radius:22px;padding:26px;background:var(--paper,#fff)}
+.continue-card{background:linear-gradient(135deg,#fffaf0,#f5f1e8)}
+.continue-card h2,.daily-card h2{margin:8px 0 10px;font-size:30px}
+.continue-card p,.daily-card p{color:var(--muted,#666);line-height:1.6;max-width:650px}
+.continue-progress{display:flex;align-items:center;gap:12px;margin:20px 0}
+.continue-progress .progress-track{flex:1}
+.continue-progress strong{font-family:var(--mono,monospace);font-size:14px}
+.plan-row{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.plan-row span{padding:7px 10px;border-radius:999px;background:var(--soft,#f2f0eb);font-size:12px;font-weight:700}
+.feature-card .text-btn{margin-top:18px}
+@media(max-width:800px){.dashboard-grid{grid-template-columns:1fr}.continue-card h2,.daily-card h2{font-size:24px}}

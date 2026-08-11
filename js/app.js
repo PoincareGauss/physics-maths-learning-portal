@@ -115,24 +115,36 @@ function hero(){
 }
 
 function dashboard(){
-  const s=subjectStats(state.subject), topics=topicsForSubject(state.subject), recent=topics.filter(t=>t.live).slice(0,4);
-  const exams=[...new Set(allSubjectQuestions(state.subject).map(q=>q.exam_id))];
+  const s=subjectStats(state.subject), topics=topicsForSubject(state.subject), live=topics.filter(t=>t.live);
+  const allQs=allSubjectQuestions(state.subject), solved=allQs.filter(q=>isSolved(questionKey(q)));
+  const bookmarked=allQs.filter(q=>isBookmarked(q)).length, mistakes=allQs.filter(q=>isMistake(q)).length;
+  const recent=live.slice(0,4);
+  const nextTopic=live.find(t=>topicStats(t.id).completion<100) || live[0];
+  const nextStats=nextTopic?topicStats(nextTopic.id):null;
+  const examCounts=[...new Set(allQs.map(q=>q.exam_id))].map(id=>({id,n:allQs.filter(q=>q.exam_id===id).length})).sort((a,b)=>b.n-a.n).slice(0,5);
   return `${hero()}
     <section class="stats-grid">
-      <div class="metric"><span>Topics</span><strong>${s.live} <small>/ ${s.topics}</small></strong><em>live now</em></div>
-      <div class="metric"><span>Questions</span><strong>${s.questions}</strong><em>in this subject</em></div>
-      <div class="metric"><span>Solved</span><strong>${s.solved}</strong><em>your progress</em></div>
-      <div class="metric"><span>Exams</span><strong>${exams.length}</strong><em>represented</em></div>
+      <div class="metric"><span>Questions solved</span><strong>${s.solved}</strong><em>of ${s.questions} available</em></div>
+      <div class="metric"><span>Overall mastery</span><strong>${s.completion}%</strong><em>marked solved</em></div>
+      <div class="metric"><span>Bookmarks</span><strong>${bookmarked}</strong><em>saved for revision</em></div>
+      <div class="metric"><span>Mistakes</span><strong>${mistakes}</strong><em>in your notebook</em></div>
     </section>
-    <section class="content-section"><div class="section-heading"><div><span class="eyebrow">Start here</span><h2>Topics for ${state.subject==='math'?'Mathematics':'Physics'}</h2></div><button class="text-btn" data-route="topics">View all →</button></div>
+    <section class="dashboard-grid">
+      <article class="continue-card">
+        <div><span class="eyebrow">Continue learning</span><h2>${escapeHtml(nextTopic?.label||'Choose a topic')}</h2><p>${nextStats?`${nextStats.solved} of ${nextStats.questions} questions solved · ${nextStats.completion}% complete`:'Select a live topic to begin your first study session.'}</p></div>
+        <div class="continue-progress"><div class="progress-track"><i style="width:${nextStats?.completion||0}%"></i></div><strong>${nextStats?.completion||0}%</strong></div>
+        <button class="primary-btn" data-topic-go="${nextTopic?.id||''}" ${nextTopic?'':'disabled'}>${nextStats?.solved?'Continue topic →':'Start topic →'}</button>
+      </article>
+      <article class="daily-card"><span class="eyebrow">Today's plan</span><h2>15 focused questions</h2><p>Warm up with recognition, then finish with one deeper problem.</p><div class="plan-row"><span>5 easy</span><span>7 medium</span><span>3 hard</span></div><button class="secondary-btn" data-start-test="challenge">Start challenge →</button></article>
+    </section>
+    <section class="content-section"><div class="section-heading"><div><span class="eyebrow">Your curriculum</span><h2>Topics for ${state.subject==='math'?'Mathematics':'Physics'}</h2></div><button class="text-btn" data-route="topics">View all →</button></div>
       <div class="topic-grid">${recent.map(topicCard).join('')}</div>
     </section>
-    <section class="content-section two-col">
-      <div class="feature-card dark"><span class="eyebrow">How to use Trickbank</span><h2>One technique. Many problems.</h2><p>Open a topic, study its toolkit, solve the question bank, then drill a technique until the move becomes automatic.</p><button class="light-btn" data-route="toolkit">Open the toolkit →</button></div>
-      <div class="feature-card"><span class="eyebrow">Exam coverage</span><h2>Practice by exam shape</h2><div class="exam-list">${exams.map(e=>{const qs=allSubjectQuestions(state.subject).filter(q=>q.exam_id===e); return `<div><span class="exam-dot ${examMeta(e)[1]}"></span><b>${examMeta(e)[0]}</b><span>${qs.length} questions</span></div>`}).join('')}</div></div>
+    <section class="dashboard-grid">
+      <article class="feature-card"><span class="eyebrow">Exam coverage</span><h2>Practice by exam shape</h2><div class="exam-list">${examCounts.map(({id,n})=>`<div><span class="exam-dot ${examMeta(id)[1]}"></span><b>${examMeta(id)[0]}</b><span>${n} questions</span></div>`).join('')}</div><button class="text-btn" data-route="exams">Explore exam modes →</button></article>
+      <article class="feature-card dark"><span class="eyebrow">Revision loop</span><h2>Turn mistakes into mastery.</h2><p>Review saved mistakes, revisit bookmarked questions, then drill the technique behind them.</p><div class="hero-actions"><button class="light-btn" data-route="mistakes">Mistake notebook</button><button class="light-btn" data-route="bookmarks">Bookmarks</button></div></article>
     </section>`;
 }
-
 function topicCard(t){
   const st=topicStats(t.id); return `<article class="topic-card ${t.live?'':'disabled'}" data-topic="${t.id}">
     <div class="topic-card-top"><span class="topic-status">${t.live?'LIVE':'COMING SOON'}</span><span>${st.questions} Q</span></div><h3>${escapeHtml(t.label)}</h3><p>${escapeHtml(t.blurb||'A new Trickbank topic is being prepared.')}</p><div class="topic-progress"><i style="width:${st.completion}%"></i></div><footer><span>${st.completion}% complete</span><button ${t.live?'':'disabled'} data-topic-go="${t.id}">${t.live?'Study →':'Soon'}</button></footer></article>`;
