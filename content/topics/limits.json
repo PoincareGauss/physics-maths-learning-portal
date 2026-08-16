@@ -169,5 +169,6 @@
         "Riemann sum (a to b): \\(\\displaystyle\\lim_{n\\to\\infty}\\dfrac{b-a}{n}\\sum_{k=1}^n f\\!\\left(a+k\\cdot\\dfrac{b-a}{n}\\right)=\\int_a^b f(x)dx\\)"
       ]
     }
-  ]
+  ],
+  "question_count": 138
 }

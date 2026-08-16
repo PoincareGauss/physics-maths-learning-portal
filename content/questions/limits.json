@@ -2318,10 +2318,10 @@
     "exam_name": "JEE Advanced",
     "qid": "Q123",
     "source": "Trickbank original practice set — 2026",
-    "question": "lim x→0 x/(|x|+x)",
-    "solution": "For x>0 it is 1/2; for x<0 denominator is zero.",
+    "question": "lim x→0 sin(1/x)",
+    "solution": "As x approaches 0, 1/x oscillates without bound and sin(1/x) continues to oscillate between −1 and 1, so no single limit exists.",
     "answer": "DNE",
-    "tip": "💡 <strong>Technique:</strong> One-sided",
+    "tip": "💡 Technique: Oscillatory limit",
     "technique_ids": [
       "01"
     ],
@@ -2331,9 +2331,9 @@
     "solved_default": false,
     "options": [
       "DNE",
-      "1/2",
       "0",
-      "1"
+      "1",
+      "−1"
     ],
     "type": "MCQ"
   },
@@ -2367,9 +2367,9 @@
     "qid": "Q125",
     "source": "Trickbank original practice set — 2026",
     "question": "Find a such that lim x→0 [e^(ax)−1−ax]/x²=2",
-    "solution": "Limit=a²/2; hence a²=4.",
-    "answer": "a=±2",
-    "tip": "💡 <strong>Technique:</strong> Parameter expansion",
+    "solution": "Using e^(ax)=1+ax+a²x²/2+O(x³), the limit is a²/2. Setting a²/2=2 gives a²=4, hence a=±2.",
+    "answer": "±2",
+    "tip": "💡 Technique: Parameter matching with series",
     "technique_ids": [
       "01"
     ],
