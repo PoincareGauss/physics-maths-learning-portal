@@ -46,3 +46,7 @@ This release uses the supplied question/topic bank as its source of truth. Topic
 ## Next production step
 
 For a multi-user deployment, replace browser-only persistence with an API/database for accounts, attempts, bookmarks, mistakes, test history, and analytics. The current content JSON layer can remain as the seed/import format.
+
+
+## Limits expansion
+The Limits question bank now includes 50 additional original JEE Main/JEE Advanced-style practice problems, increasing the live Limits bank from 88 to 138 questions.

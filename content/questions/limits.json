@@ -1496,5 +1496,1205 @@
     "topic": "limits",
     "subject": "math",
     "solved_default": false
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q89",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 sin(5x)/x",
+    "solution": "sin u/u→1.",
+    "answer": "5",
+    "tip": "💡 <strong>Technique:</strong> Standard trig",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "5",
+      "1/5",
+      "0",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q90",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→2 (x²−4)/(x−2)",
+    "solution": "Factor x²−4=(x−2)(x+2).",
+    "answer": "4",
+    "tip": "💡 <strong>Technique:</strong> Factorization",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "2",
+      "4",
+      "0",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q91",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (√(1+x)−1)/x",
+    "solution": "Rationalize; obtain 1/(√(1+x)+1).",
+    "answer": "1/2",
+    "tip": "💡 <strong>Technique:</strong> Rationalization",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/2",
+      "1",
+      "0",
+      "2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q92",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (e^(3x)−1)/x",
+    "solution": "Use (e^u−1)/u→1.",
+    "answer": "3",
+    "tip": "💡 <strong>Technique:</strong> Exponential",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1",
+      "3",
+      "e³",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q93",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 ln(1+7x)/x",
+    "solution": "Use ln(1+u)~u.",
+    "answer": "7",
+    "tip": "💡 <strong>Technique:</strong> Logarithmic",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1",
+      "7",
+      "1/7",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q94",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 tan(4x)/sin(2x)",
+    "solution": "tan(4x)~4x and sin(2x)~2x.",
+    "answer": "2",
+    "tip": "💡 <strong>Technique:</strong> Equivalent infinitesimals",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1",
+      "2",
+      "4",
+      "1/2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q95",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→1 (x³+2x²−x+4)/(x+2)",
+    "solution": "Direct substitution; denominator is nonzero.",
+    "answer": "2",
+    "tip": "💡 <strong>Technique:</strong> Continuity",
+    "technique_ids": [
+      "12"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "2",
+      "4/3",
+      "3",
+      "6"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q96",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→−1 (2x³−3x+4)",
+    "solution": "Polynomials are continuous.",
+    "answer": "5",
+    "tip": "💡 <strong>Technique:</strong> Polynomial",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 1,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "5",
+      "3",
+      "−1",
+      "9"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q97",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (1−cos(6x))/x²",
+    "solution": "1−cos u~u²/2.",
+    "answer": "18",
+    "tip": "💡 <strong>Technique:</strong> Trig second order",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "6",
+      "18",
+      "36",
+      "9"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q98",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 sin(3x)sin(5x)/x²",
+    "solution": "sin(3x)~3x and sin(5x)~5x.",
+    "answer": "15",
+    "tip": "💡 <strong>Technique:</strong> Trig product",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "8",
+      "15",
+      "5/3",
+      "1"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q99",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (e^(2x)−1)/sin(3x)",
+    "solution": "Numerator~2x, denominator~3x.",
+    "answer": "2/3",
+    "tip": "💡 <strong>Technique:</strong> Mixed standard",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "2/3",
+      "3/2",
+      "1",
+      "6"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q100",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 ln(1+sin x)/x",
+    "solution": "ln(1+u)~u and sin x~x.",
+    "answer": "1",
+    "tip": "💡 <strong>Technique:</strong> Log-trig",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q101",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 |x|/x",
+    "solution": "Right limit 1; left limit −1.",
+    "answer": "DNE",
+    "tip": "💡 <strong>Technique:</strong> Absolute value",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q102",
+    "source": "Trickbank original practice set — 2026",
+    "question": "For f=(x²−ax+2)/(x−2), finite lim x→2 requires a=?",
+    "solution": "Numerator must vanish at x=2: 4−2a+2=0.",
+    "answer": "3",
+    "tip": "💡 <strong>Technique:</strong> Parameter",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q103",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→∞ (3x²−5x+1)/(2x²+x−4)",
+    "solution": "Divide by x² and keep leading coefficients.",
+    "answer": "3/2",
+    "tip": "💡 <strong>Technique:</strong> Infinity",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "3/2",
+      "2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q104",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→∞ (√(x²+3x)−x)",
+    "solution": "Rationalize; get 3/(√(1+3/x)+1).",
+    "answer": "3/2",
+    "tip": "💡 <strong>Technique:</strong> Radical infinity",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "3/2",
+      "3",
+      "∞"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q105",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→∞ (√(x²+4)−x)",
+    "solution": "Rationalize to 4/(√(x²+4)+x).",
+    "answer": "0",
+    "tip": "💡 <strong>Technique:</strong> Radical infinity",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "2",
+      "4"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q106",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 x sin(1/x)",
+    "solution": "Absolute value is ≤|x|.",
+    "answer": "0",
+    "tip": "💡 <strong>Technique:</strong> Squeeze",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q107",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 x² cos(1/x²)",
+    "solution": "Bound by x².",
+    "answer": "0",
+    "tip": "💡 <strong>Technique:</strong> Squeeze",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "apcalc",
+    "exam_name": "AP Calculus",
+    "qid": "Q108",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim h→0 ((2+h)³−8)/h",
+    "solution": "It is the derivative of x³ at x=2.",
+    "answer": "12",
+    "tip": "💡 <strong>Technique:</strong> Derivative definition",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "6",
+      "12",
+      "4",
+      "8"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q109",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim h→0 [ln(4+h)−ln4]/h",
+    "solution": "Derivative of ln x at x=4.",
+    "answer": "1/4",
+    "tip": "💡 <strong>Technique:</strong> Derivative definition",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/4",
+      "4",
+      "ln4",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q110",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim h→0 [cos(π/3+h)−cos(π/3)]/h",
+    "solution": "Derivative of cos x is −sin x.",
+    "answer": "−√3/2",
+    "tip": "💡 <strong>Technique:</strong> Derivative definition",
+    "technique_ids": [
+      "10"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "−1/2",
+      "1/2",
+      "−√3/2",
+      "√3/2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q111",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (sin x−x)/x³",
+    "solution": "sin x=x−x³/6+O(x⁵).",
+    "answer": "−1/6",
+    "tip": "💡 <strong>Technique:</strong> Cubic cancellation",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "−1/6",
+      "1/6",
+      "−1/3",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q112",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (x−sin x)/x³",
+    "solution": "Subtract the expansion from x.",
+    "answer": "1/6",
+    "tip": "💡 <strong>Technique:</strong> Cubic cancellation",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/6",
+      "−1/6",
+      "1/3",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q113",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (e^x−1−x)/x²",
+    "solution": "e^x=1+x+x²/2+O(x³).",
+    "answer": "1/2",
+    "tip": "💡 <strong>Technique:</strong> Exponential expansion",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/2",
+      "1",
+      "0",
+      "2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q114",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [ln(1+x)−x]/x²",
+    "solution": "ln(1+x)=x−x²/2+O(x³).",
+    "answer": "−1/2",
+    "tip": "💡 <strong>Technique:</strong> Log expansion",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/2",
+      "−1/2",
+      "1",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q115",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (sin x/x)^(1/x²)",
+    "solution": "Take logs; ln(sin x/x)~−x²/6.",
+    "answer": "e^(−1/6)",
+    "tip": "💡 <strong>Technique:</strong> 1^∞ form",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1",
+      "e^(−1/6)",
+      "e^(1/6)",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q116",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (1+2x)^(1/x)",
+    "solution": "Logarithm tends to 2.",
+    "answer": "e²",
+    "tip": "💡 <strong>Technique:</strong> 1^∞ form",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "e",
+      "e²",
+      "1",
+      "e^(1/2)"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q117",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [ln(1+x)−sin x]/x²",
+    "solution": "Linear terms cancel; quadratic term is −x²/2.",
+    "answer": "−1/2",
+    "tip": "💡 <strong>Technique:</strong> Log comparison",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "−1/2",
+      "0",
+      "1/2",
+      "1"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q118",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (sin x−tan x)/x³",
+    "solution": "sin x~x−x³/6; tan x~x+x³/3.",
+    "answer": "−1/2",
+    "tip": "💡 <strong>Technique:</strong> Trig expansion",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "−1/2",
+      "1/2",
+      "−1/3",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q119",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [1−cos x cos(2x)]/x²",
+    "solution": "cos x cos2x=1−5x²/2+O(x⁴).",
+    "answer": "5/2",
+    "tip": "💡 <strong>Technique:</strong> Trig product",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/2",
+      "3/2",
+      "5/2",
+      "2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q120",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [√(1+x)−1−x/2]/x²",
+    "solution": "√(1+x)=1+x/2−x²/8+O(x³).",
+    "answer": "−1/8",
+    "tip": "💡 <strong>Technique:</strong> Radical expansion",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "−1/8",
+      "1/8",
+      "−1/4",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q121",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [sin(7x)−7sin x]/x³",
+    "solution": "Cubic coefficients: −343/6+7/6=−56.",
+    "answer": "−56",
+    "tip": "💡 <strong>Technique:</strong> Multiple angle",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "−56",
+      "−28",
+      "28",
+      "56"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q122",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 x sin(1/x)/(1+x²)",
+    "solution": "Bound numerator by |x|.",
+    "answer": "0",
+    "tip": "💡 <strong>Technique:</strong> Oscillation",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q123",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 x/(|x|+x)",
+    "solution": "For x>0 it is 1/2; for x<0 denominator is zero.",
+    "answer": "DNE",
+    "tip": "💡 <strong>Technique:</strong> One-sided",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "DNE",
+      "1/2",
+      "0",
+      "1"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q124",
+    "source": "Trickbank original practice set — 2026",
+    "question": "Find k so lim x→0 (sin x−kx)/x³ is finite",
+    "solution": "The linear term must cancel.",
+    "answer": "1",
+    "tip": "💡 <strong>Technique:</strong> Parameter cancellation",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "Any k"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q125",
+    "source": "Trickbank original practice set — 2026",
+    "question": "Find a such that lim x→0 [e^(ax)−1−ax]/x²=2",
+    "solution": "Limit=a²/2; hence a²=4.",
+    "answer": "a=±2",
+    "tip": "💡 <strong>Technique:</strong> Parameter expansion",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "2",
+      "−2",
+      "±2",
+      "No real value"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q126",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 (tan x−x)/x³",
+    "solution": "tan x=x+x³/3+O(x⁵).",
+    "answer": "1/3",
+    "tip": "💡 <strong>Technique:</strong> L’Hôpital/expansion",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/3",
+      "−1/3",
+      "1/6",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q127",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [x−ln(1+x)−x²/2]/x³",
+    "solution": "Use ln(1+x)=x−x²/2+x³/3+O(x⁴).",
+    "answer": "−1/3",
+    "tip": "💡 <strong>Technique:</strong> Log higher order",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/3",
+      "−1/3",
+      "1/6",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q128",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [(1+x)³−e^(3x)]/x²",
+    "solution": "Quadratic coefficients are 3 and 9/2.",
+    "answer": "−3/2",
+    "tip": "💡 <strong>Technique:</strong> Polynomial vs exponential",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "−3/2",
+      "−3",
+      "3",
+      "−9/2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q129",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→∞ x ln(1+1/x)",
+    "solution": "Set u=1/x and use ln(1+u)/u→1.",
+    "answer": "1",
+    "tip": "💡 <strong>Technique:</strong> Infinity logarithm",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "e",
+      "∞"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q130",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→∞ (1+2/x)^x",
+    "solution": "Standard exponential limit.",
+    "answer": "e²",
+    "tip": "💡 <strong>Technique:</strong> Infinity exponential",
+    "technique_ids": [
+      "03"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "e",
+      "e²",
+      "2",
+      "∞"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q131",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→∞ x[√(1+3/x)−1]",
+    "solution": "Rationalize to 3/(√(1+3/x)+1).",
+    "answer": "3/2",
+    "tip": "💡 <strong>Technique:</strong> Infinity radical",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1",
+      "3/2",
+      "3",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q132",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 x² sin(1/x³)",
+    "solution": "Absolute value ≤x².",
+    "answer": "0",
+    "tip": "💡 <strong>Technique:</strong> Oscillation",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "DNE"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q133",
+    "source": "Trickbank original practice set — 2026",
+    "question": "For f(x)=ax+1 (x<1), x²+a (x≥1), continuity at x=1 gives",
+    "solution": "Both one-sided values equal a+1 for every real a.",
+    "answer": "All real a",
+    "tip": "💡 <strong>Technique:</strong> Continuity parameter",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "a=0",
+      "a=1",
+      "a=2",
+      "All real a"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q134",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [1−cos(2x)]/[1−cos(5x)]",
+    "solution": "Use 1−cos(kx)~k²x²/2.",
+    "answer": "4/25",
+    "tip": "💡 <strong>Technique:</strong> Trig identity",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "2/5",
+      "4/25",
+      "25/4",
+      "1"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "bitsat",
+    "exam_name": "BITSAT",
+    "qid": "Q135",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [sin(2x)+sin(4x)]/sin(3x)",
+    "solution": "Numerator~6x, denominator~3x.",
+    "answer": "2",
+    "tip": "💡 <strong>Technique:</strong> Trig ratio",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-main",
+    "exam_name": "JEE Main",
+    "qid": "Q136",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→4 [√x−2]/[x−4]",
+    "solution": "Rationalize to 1/(√x+2).",
+    "answer": "1/4",
+    "tip": "💡 <strong>Technique:</strong> Rationalization",
+    "technique_ids": [
+      "09"
+    ],
+    "difficulty": 2,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "0"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q137",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [1−cos(sin x)]/x²",
+    "solution": "1−cos u~u²/2 and sin x~x.",
+    "answer": "1/2",
+    "tip": "💡 <strong>Technique:</strong> Nested standard limit",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/2",
+      "1",
+      "0",
+      "2"
+    ],
+    "type": "MCQ"
+  },
+  {
+    "exam_id": "jee-adv",
+    "exam_name": "JEE Advanced",
+    "qid": "Q138",
+    "source": "Trickbank original practice set — 2026",
+    "question": "lim x→0 [ln(1+x)−x/(1+x)]/x²",
+    "solution": "Both equal x to first order; second-order terms differ by x²/2.",
+    "answer": "1/2",
+    "tip": "💡 <strong>Technique:</strong> Composite log",
+    "technique_ids": [
+      "01"
+    ],
+    "difficulty": 3,
+    "topic": "limits",
+    "subject": "math",
+    "solved_default": false,
+    "options": [
+      "1/2",
+      "−1/2",
+      "1",
+      "0"
+    ],
+    "type": "MCQ"
   }
 ]
